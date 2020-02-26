@@ -1,0 +1,68 @@
+@startuml
+title FEUPBook
+
+class Utilizador {
+    nome
+}
+
+class Foto {
+    nome
+}
+
+class Publicação {
+    conteúdo
+}
+
+class Página {
+
+}
+
+class Comentário {
+    conteúdo
+}
+
+class Mensagem {
+    conteúdo
+}
+
+class Conversa {
+
+}
+
+class Grupo {
+
+}
+
+class Vídeo {
+
+}
+
+class Relação {
+    // amizade, familiar...
+    tipo
+}
+
+Utilizador o-- Foto
+Utilizador -- Utilizador
+(Utilizador, Utilizador) .. Relação
+Utilizador -- Publicação
+
+Publicação o-- Comentário
+Publicação o-- Foto 
+Publicação o-- Vídeo
+
+Página -- Publicação
+Página -- Utilizador : seguidores
+Página -- Utilizador : administrador
+
+Conversa o-- Mensagem
+Conversa -- Utilizador
+Conversa -- Página
+
+Mensagem -- Utilizador : autor
+
+Grupo -- Utilizador : membros
+Grupo -- Utilizador : administrador
+Grupo -- Publicação
+
+@enduml
