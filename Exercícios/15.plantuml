@@ -1,0 +1,46 @@
+@startuml
+
+class Encontro {
+    data de realização
+}
+
+class EncontroSet {
+    resultado
+    duração
+}
+
+class Pessoa {
+    nome
+    idade
+}
+
+class Court {
+    lotação máxima
+}
+
+class Jogo {
+    resultado
+}
+
+class Juiz {
+    posição
+}
+
+class Jogador {
+    ranking
+}
+
+Encontro *-- Set 
+(Encontro, Set) .. EncontroSet
+Encontro - Court
+Encontro -- Árbitro
+Encontro -- Juiz
+Encontro -- Jogador
+
+Set *-- Jogo
+
+Pessoa ^-- Árbitro
+Pessoa ^-- Juiz
+Pessoa ^-- Jogador
+
+@enduml

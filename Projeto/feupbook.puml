@@ -1,0 +1,98 @@
+@startuml
+title FEUPBook
+
+class Utilizador {
+    id
+    nome
+    data de nascimento
+    número de telemóvel
+    género
+}
+
+class Multimédia {
+    id
+    título
+}
+
+class Publicação {
+    texto
+    data
+}
+
+class Comentário {
+    texto
+}
+
+class Mensagem {
+    ' Pode ser string vazia '
+    texto
+}
+
+class Conversa {
+    nome
+}
+
+class Reação {
+    tipo
+}
+
+class Evento {
+    nome
+}
+
+class Data {
+    
+}
+
+class Página {
+    nome
+    website
+}
+
+class Localização {
+    rua
+    código postal
+}
+
+Utilizador "*" -- "*" Utilizador : amizade
+(Utilizador, Utilizador) .. Data
+Utilizador "*" -- "*" Utilizador : pedido de amizade
+(Utilizador, Utilizador) .. Data
+Utilizador "1" -- "*" Publicação : autor
+Utilizador "1" -- "*" Publicação
+(Utilizador, Publicação) .. Reação
+Utilizador "*" -- "1" Localização : morada
+
+Publicação "1" *-- "*" Comentário
+Publicação "1" o-- "*" Multimédia
+Publicação "*" -- "1" Data
+Publicação "*" -- "1" Localização
+
+Página "1" -- "*" Publicação
+Página "*" -- "*" Utilizador : seguidor
+Página "*" -- Utilizador : administrador
+
+Conversa "1" *-- "*" Mensagem
+Conversa "*" -- "1..*" Utilizador : participante
+Conversa "*" -right- "*" Página : participante
+
+Grupo "*" -- "*" Utilizador : membro
+Grupo "*" -- "1" Utilizador : administrador
+Grupo "1" -right- "*" Publicação
+
+Multimédia <|-- Foto
+Multimédia <|-- Vídeo
+Multimédia <|-- Áudio
+ 
+Mensagem "*" --- "1" Utilizador : autor
+Mensagem "1" o-- "1" Multimédia : conteúdo
+Mensagem "*" --- "1" Data
+
+Comentário "*" --- "1" Utilizador : autor
+Comentário "*" --left- "*" Utilizador
+(Comentário, Utilizador) ... Reação
+
+Evento "*" --- "1" Data : data de realização
+Evento "*" --- "*" Utilizador : participante
+
+@enduml
