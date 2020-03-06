@@ -4,7 +4,6 @@ title FEUPBook
 class Utilizador {
     id
     nome
-    data de nascimento
     número de telemóvel
     género
 }
@@ -15,8 +14,8 @@ class Multimédia {
 }
 
 class Publicação {
-    texto
-    data
+    id
+    descrição
 }
 
 class Comentário {
@@ -40,6 +39,7 @@ class Evento {
     nome
 }
 
+' SQL já possui uma class de data, é necessário implementar outra? '
 class Data {
     
 }
@@ -59,26 +59,28 @@ Utilizador "*" -- "*" Utilizador : amizade
 Utilizador "*" -- "*" Utilizador : pedido de amizade
 (Utilizador, Utilizador) .. Data
 Utilizador "1" -- "*" Publicação : autor
-Utilizador "1" -- "*" Publicação
-(Utilizador, Publicação) .. Reação
 Utilizador "*" -- "1" Localização : morada
+Utilizador "*" -- "1" Data : data de nascimento
 
 Publicação "1" *-- "*" Comentário
 Publicação "1" o-- "*" Multimédia
-Publicação "*" -- "1" Data
+Publicação "*" -right- "1" Data : data de publicação
 Publicação "*" -- "1" Localização
+Publicação "*" -- "*" Reação 
 
 Página "1" -- "*" Publicação
 Página "*" -- "*" Utilizador : seguidor
-Página "*" -- Utilizador : administrador
+Página "*" -- "1" Utilizador : administrador
+Página "*" -- "1" Data : data de criação
 
 Conversa "1" *-- "*" Mensagem
 Conversa "*" -- "1..*" Utilizador : participante
 Conversa "*" -right- "*" Página : participante
 
-Grupo "*" -- "*" Utilizador : membro
-Grupo "*" -- "1" Utilizador : administrador
+Grupo "*" -down- "*" Utilizador : membro
+Grupo "*" -down- "1" Utilizador : administrador
 Grupo "1" -right- "*" Publicação
+Grupo "*" -- "1" Data : data de criação
 
 Multimédia <|-- Foto
 Multimédia <|-- Vídeo
@@ -86,13 +88,15 @@ Multimédia <|-- Áudio
  
 Mensagem "*" --- "1" Utilizador : autor
 Mensagem "1" o-- "1" Multimédia : conteúdo
-Mensagem "*" --- "1" Data
+Mensagem "*" --- "1" Data : data de envio
 
 Comentário "*" --- "1" Utilizador : autor
-Comentário "*" --left- "*" Utilizador
-(Comentário, Utilizador) ... Reação
+Comentário "*" -- "*" Reação
+
+Reação "*" -- "1" Utilizador
 
 Evento "*" --- "1" Data : data de realização
 Evento "*" --- "*" Utilizador : participante
+Evento "*" -right- "1" Localização : local a realizar-se
 
 @enduml

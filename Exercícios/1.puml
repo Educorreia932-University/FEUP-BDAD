@@ -1,0 +1,72 @@
+@startuml Exercício 1
+
+ skinparam Linetype ortho
+
+class PaisOrigem {
+    sigla
+    nome
+}
+
+class Marca {
+    nome
+    pontos
+}
+
+class Carro {
+    peso
+    potencia
+    velocidade_maxima
+    id
+}
+
+class Piloto {
+    nome
+    morada
+    data_nascimento
+    pontos
+}
+
+class Corrida {
+    data
+    voltas
+    id
+}
+
+class Circuito {
+    nome
+    local
+}
+
+class Desistencia {
+    volta
+    motivo
+}
+
+class Classificacao {
+    posicao_partida
+    posicao_chegada
+}
+
+Carro "1" -- "1..*" Piloto
+Carro "1..*" -- "1" Marca
+
+PaisOrigem "1" -- "*" Marca
+PaisOrigem "1" -- "*" Circuito
+PaisOrigem -- Piloto 
+
+Corrida "1..2" -- "1" Circuito
+Corrida -- Piloto
+(Corrida, Piloto) .. Desistencia
+Corrida -- Piloto
+(Corrida, Piloto) .. Classificacao 
+
+note top of PaisOrigem : PaisOrigem(<u>sigla</u>, nome)
+note bottom of Piloto : Piloto(<u>nome</u>, <u>data_nascimento</u>, pontos, morada, siglaPais -> PaisOrigem, idCarro -> Carro)
+note top of Classificacao : CorridaPiloto(<u>nomePiloto</u> -> Piloto, <u>idCorrida</u> -> Corrida, posicaoPartida, posicaoChegada)
+note bottom of Desistencia : Desistencia(<u>idPiloto</u> -> Piloto, <u>idCorrida</u> -> Corrida, volta, motivo)
+note bottom of Circuito : Circuito(<u>nome</u>, local, <u>paisSigla</u>->paisOrigem)
+note bottom of Carro : Carro(<u>id</u>, potencia, peso, velocidade_maxima, nomeMarca -> Marca)
+note left of Corrida : Corrida(<u>id</u>, data, voltas, circuit -> Circuito)
+note top of Marca : Marca(id, nome, pontos, pais_sigla -> paisOrigem)
+
+@enduml
