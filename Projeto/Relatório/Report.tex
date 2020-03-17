@@ -26,39 +26,55 @@
 
 \chapter{Introdução}
 
-O nosso projeto consiste numa rede social denominada \textit{FEUPBook} (inspirado pela já existente rede socal,  \textit{Facebook}). Nesta, utilizadores poderão criar uma conta pessoal para falar uns com os outros e ver diversas publicações do seu interesse no seu \textit{feed}.
+O nosso projeto consiste numa rede social denominada \textit{FEUPBook} (inspirado pela já existente rede socal,  \textit{Facebook}). Nesta, utilizadores poderão criar uma conta pessoal para falar uns com os outros, através da troca de mensagens de texto e ver diversas publicações do seu interesse no seu \textit{feed} (a página inicial), bem como organizar eventos, juntarem-se em grupos ou edificar uma página dedicada a algum assunto em particular.
 
 \chapter{Especificação} 
 
 \section{Multimédia}
 
-A rede social do nosso projeto possui a capacidade de partilhar ficheiros multimédia, quer seja através de mensagens ou publicações e dividem-se essencialmente em três categorias, áudio, imagem e vídeo. Cada ficheiro destes possui um \underline{título}, correspondente ao seu nome em memória, bem como um \underline{url} que indica a localização do ficheiro para lhe aceder. \par
+A rede social do nosso projeto possui a capacidade de partilhar ficheiros \textbf{multimédia}, quer seja através de mensagens ou publicações e dividem-se essencialmente em três \textbf{categorias}, áudio, imagem e vídeo. Cada ficheiro destes possui um \underline{título}, correspondente ao seu nome em memória, bem como um \underline{url} que indica a localização do ficheiro para lhe aceder. \par
 
-TODO: Limite do tamanho de ficheiros. É possível enviar ficheiros binários (?)
+É possível, no entanto, enviar qualquer tipo de ficheiros, não só áudio, imagem ou vídeo, porém se a sua extensão não corresponder a nenhum deste tipo de ficheiros, será enviado como um ficheiro binário que o utilizador pode descarregar. \par
+
+Existe ainda um limite máximo do tamanho ficheiro que o utilizador pode enviar e é de 25 MB. \par
+
+Tanto o áudio como vídeo possuem um \underline{comprimento} da sua duração em segundos.
 
 \subsection{Áudio}
 
-Este tipo de ficheiro é nomeadamente 
+\textbf{Possíveis extensões:} .mp3, .wav, ...
 
-.mp3 .wav (?)
+\subsection{Imagem}
 
-\subsection{Foto}
-
-.jpg .png .bmp (?)
+\textbf{Possíveis extensões:} .jpg, .png, .bmp, ...
 
 \subsection{Vídeo}
 
-\section{Utilizador}
+\textbf{Possíveis extensões:} .avi, .mp4, .wmv, ...
 
-Esta classe representa um membro da rede social. Este possui um nome e id único para o identificar (correspondente ao último campo do \textit{url} do seu perfil). \par
+\section{Atividade}
 
-Um utilizador, por norma, terá diversas amizades com outros, para que possa aceder aos conteúdos do seu perfil, conversar mais facilmente com ele e ver as publicações no seu feed. Para esse efeito, terá de enviar um pedido de amizade ao outro, o qual pode ser aceite ou não.
+Vários conteúdos na rede social terão \textbf{reações} por parte dos \textbf{utilizadores}, como tal, esta classe tem o objetivo de agregar esses mesmos conteúdos e manter o registo das reações que possuem. \par
 
-\section{Página}
+Cada um desses conteúdos possui \underline{texto} a acompanhá-los e a \underline{data} em que foram efetuados.
 
-\section{Publicação}
+\subsection{Mensagem}
 
-\section{Comentário}
+Uma \textbf{mensagem} é o modo como os utilizadores comunicam numa \underline{conversa}. \par
+
+Pode ser uma mensagem de texto, a partilha de um ficheiro multimédia ou ambos, ou seja, um utilizador pode enviar um ficheiro multimédia com descrição (texto), sem descrição, ou só uma mensagem de texto. \par
+
+\subsection{Publicação}
+
+Não só com \textbf{mensagens} é possível comunicar na rede social, mas também com \textbf{publicações}. Possuem o benefício de não serem tão privadas (não precisam de ter um destinatário em particular, ficando publicadas no perfil do \textbf{publicador} em questão que seja o autor da \textbf{publicação}). \par
+
+Esta pode ser composta por multimédia (áudio, foto ou vídeo) de tipos iguais ou diferentes. \par
+
+Agrega ainda vários comentários feitos por utilizadores que pretendam demonstrar a sua opinião em relação à mesma. \par
+
+\subsection{Comentário}
+
+Um \textbf{comentário} é feito por um \textbf{utilizador} a uma \textbf{publicação} como modo de iniciar uma discussão sobre a publicação ou simplesmente realizar algum tipo de observação/denotação. \par
 
 \section{Reação}
 
@@ -71,35 +87,63 @@ Um utilizador nem sempre tem de se manifestar com mensagens ou comentários, pod
 
 Por definição, a reação padrão será o \textit{like}. \par
 
-Um utilizador apenas pode reagir com uma das possíveis reações a um post ou comentários, mas estes podem ter reações de vários utilizadores, inclusive dos seus autores.
+Um \textbf{utilizador} apenas pode reagir com uma das possíveis reações a um post ou comentários, mas estes podem ter reações de vários utilizadores, inclusive dos seus autores.
 
-\section{Grupo}
+\section{Localização}
 
-Um grupo possui como função agregar diversos utilizadores que queiram estar juntos por
+Muitas vezes será apropriada identificar a \textbf{localização} de um acontecimento (como um evento, onde uma foto foi tirada, onde mora uma pessoa...) e como tal foi criada esta classe que agrega \underline{país}, \underline{código postal} e \underline{cidade}.
 
-\section{Conversa}
+\section{Publicador}
 
-Numa rede social é indispensável a capacidade de os utilizadores conversarem entre si, como tal estes podem agregar-se numa \underline{conversa} (que possui no mínimo 2 utilizadores). \par
+Esta classe tem como função identificar quem são os elementos que podem realizar publicações, registar que publicações efetuaram e atribuir-lhes um \underline{nome}.
 
-Uma conversa é composta por diversas \underline{mensagens}
+\subsection{Utilizador}
 
-Ainda no contexto de uma conversa, cada utilizador pode possuir uma \underline{alcunha} própria.
+Esta classe representa um \textbf{membro} da rede social. Este possui um \underline{id} único para o identificar (correspondente ao último campo do \textit{url} do seu perfil. \par
 
-\section{Mensagem}
+Um utilizador possui ainda vários outros dados pessoais (que o utilizador pode optar por não preencher por motivos de privacidade): \underline{número de telemóvel}, \underline{data de nascimento}, \underline{género} (masculino ou feminino), morada (\underline{rua} e \underline{localização}). \par
 
-Uma mensagem é o modo como os utilizadores comunicam numa \underline{conversa} e como tal possuir um \underline{texto} associado, que corresponde ao que o utilizador pretende dizer. No entanto, este \underline{texto} pode ser uma \textit{empty string}.
+Um \textbf{utilizador}, por norma, terá diversas \textbf{amizades} com outros utilizadores, para que possa aceder aos conteúdos do seu perfil, conversar mais facilmente com ele e ver as publicações no seu feed.\par
+
+Para esse efeito, terá de enviar um pedido de amizade ao outro, o qual pode ser \textbf{aceite} ou não. Se for aceite, a ligação \textbf{pedido de amizade} deixa de existir e passa a ser uma ligação de \textbf{amizade}. Se for rejeitada, essa ligação deixa de existir sem ser substituída por nenhuma outra a um novo \textbf{pedido de amizade} surgir por parte de um dos dois utilizadores.
+
+Tanto uma \textbf{amizade} como um \textbf{pedido de amizade} registam a \underline{data} em que foram efetuados.
+
+\subsection{Página}
+
+Esta classe representa uma \textbf{página} na nossa rede social. \par
+
+Esta tem também associada a si várias publicações. \par
+
+Os utilizadores relacionam-se com um página na medida em que um deles é o seu \underline{administrador} (normalmente correspondente ao criador da página, mas este cargo pode ser transferido) e possui vários \underline{seguidores}, utilizadores que colocaram gosto na página e vêm as publicações no feed.
+
+Tem um \underline{utilizador} que é o seu administrador e pode ter muitos seguidores(utilizadores).
+
+\subsection{Grupo}
+
+Um grupo possui como função agregar diversos utilizadores com um interesse em comum. Um utilizador fazendo parte de um grupo, está habilitado a fazer uma publicação, estando esta visível para os restantes membros do grupo. Um grupo tem um utilizador como administrador.
 
 \section{Evento}
 
-Se um utilizador desejar, pode criar um evento para marcar um acontecimento relevante e convidar outros utilizadores a participarem no mesmo. \par
+Se um \textbf{utilizador} desejar, pode criar um \textbf{evento} para marcar um \textbf{acontecimento} relevante e convidar outros utilizadores a participarem no mesmo. \par
 
-Um evento possui um nome que o identifica, bem como uma breve descrição do que se trata, o local em que vai ocorrer e a sua data da sua realização.
+Um \textbf{evento} possui um \underline{nome} que o identifica, bem como uma breve \underline{descrição} do que se trata, o \underline{local} em que vai ocorrer e a \underline{data} da sua realização.
+
+
+
+\section{Conversa}
+
+Numa \textbf{rede social} é indispensável a capacidade de os utilizadores conversarem entre si, como tal estes podem agregar-se numa \underline{conversa} (que possui no mínimo 2 utilizadores). \par
+
+Uma \textbf{conversa} é composta por diversas \underline{mensagens}. \par
+
+Ainda neste contexto, cada utilizador pode possuir uma \underline{alcunha} própria.
 
 \chapter{Modelo concetual}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{diagram}
+    \includegraphics[width=0.8\textwidth]{diagram}
 \end{figure}
 
 \end{document}
