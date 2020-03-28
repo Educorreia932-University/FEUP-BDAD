@@ -1,0 +1,1 @@
+π Nome (σ curso='IS' ((Prova) ⨝ ((Cadeira) ⨝ (Aluno))))

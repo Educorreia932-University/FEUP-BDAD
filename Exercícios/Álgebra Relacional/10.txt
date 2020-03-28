@@ -1,0 +1,1 @@
+γ avg(nota)->nota (σ cod='BD' Prova)

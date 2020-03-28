@@ -1,0 +1,1 @@
+π Nome (σ cod = 'TS1' ∧ nota >= 10 (Aluno ⨝ Prova)) ∩ π Nome (σ cod = 'BD' ∧ nota >= 10 (Aluno ⨝ Prova)) ∩ π Nome (σ cod = 'EIA' ∧ nota >= 10 (Aluno ⨝ Prova))
