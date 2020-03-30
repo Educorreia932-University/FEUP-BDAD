@@ -2,7 +2,7 @@
 
 **Pagina**(<u>idPagina</u>->Publicador, website, idAdministrador->Utilizador)  
 
-**Utilizador**(<u>idUtilizador</u>->Publicador, numeroTelemovel, genero, dataNascimento, idade)  
+**Utilizador**(<u>idUtilizador</u>->Publicador, numeroTelemovel, genero, dataNascimento, idade, morada)  
 
 **ParticipanteConversa**(<u>idParticipante</u>->Utilizador, <u>idConversa</u>->Conversa, alcunha)
 
@@ -24,9 +24,9 @@
 
 **Video**(<u>idVideo</u>->Multimedia, duracao)
 
-**Imagem**(<u>idImagem</u>->Multimedia, duracao)
+**Imagem**(<u>idImagem</u>->Multimedia)
 
-**Reacao**(<u>idAtividade</u>->idAtividade, idUtilizador->Utilizador, tipo)
+**Reacao**(<u>idAtividade</u>->Atividade, idUtilizador->Utilizador, tipo)
 
 **Comentario**(<u>idComentario</u>->Atividade, idAutor->Utilizador, idPublicacao->Publicacao)
 
