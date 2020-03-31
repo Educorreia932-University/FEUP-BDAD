@@ -1,22 +1,22 @@
-**Publicador**(<u>idPublicador</u>, nome)  
+**Publisher**(<u>idPublisher</u>, name)  
 
-**Pagina**(<u>idPagina</u>->Publicador, website, idAdministrador->Utilizador)  
+**Page**(<u>idPage</u>->Publisher, website, idAdministrador->User)  
 
-**Utilizador**(<u>idUtilizador</u>->Publicador, numeroTelemovel, genero, dataNascimento, idade, morada)  
+**User**(<u>idUser</u>->Publisher, numeroTelemovel, genero, dataNascimento, idade, morada)  
 
-**ParticipanteConversa**(<u>idParticipante</u>->Utilizador, <u>idConversa</u>->Conversa, alcunha)
+**ChatParticipant**(<u>idParticipante</u>->User, <u>idConversa</u>->Conversa, alcunha)
 
-**Amizade**(<u>idRemetente</u>->Utilizador, <u>idRecetor</u>->Utilizador, estado, data)
+**Friendship**(<u>idRemetente</u>->User, <u>idRecetor</u>->User, estado, data)
 
-**ParticipanteEvento**(<u>idParticipante</u>->Utilizador, <u>idEvento</u>->Evento)
+**EventParticipant**(<u>idParticipante</u>->User, <u>idEvento</u>->Evento)
 
-**SeguidorPagina**(<u>idSeguidor</u>->Utilizador, <u>idPagina</u>->Pagina)
+**PageFollower**(<u>idSeguidor</u>->User, <u>idPage</u>->Page)
 
-**MembroGrupo**(<u>idMembro</u>->Utilizador, <u>idGrupo</u>->Grupo)
+**GroupMember**(<u>idMembro</u>->User, <u>idGrupo</u>->Grupo)
 
-**Grupo**(<u>idGrupo</u>, nome, idAdministrador->Utilizador)  
+**Grupo**(<u>idGrupo</u>, name, idAdministrador->User)  
 
-**Evento**(<u>idEvento</u>, nome, descricao, dataRealizacao, idCriador->Utilizador)  
+**Evento**(<u>idEvento</u>, name, descricao, dataRealizacao, idCriador->User)  
 
 **Multimedia**(<u>idMultimedia</u>, titulo, url, tamanho, formato)  
 
@@ -26,14 +26,14 @@
 
 **Imagem**(<u>idImagem</u>->Multimedia)
 
-**Reacao**(<u>idAtividade</u>->Atividade, idUtilizador->Utilizador, tipo)
+**Reacao**(<u>idAtividade</u>->Atividade, idUser->User, tipo)
 
-**Comentario**(<u>idComentario</u>->Atividade, idAutor->Utilizador, idPublicacao->Publicacao)
+**Comentario**(<u>idComentario</u>->Atividade, idAutor->User, idPublicacao->Publicacao)
 
-**Publicacao**(<u>idPublicacao</u>->Atividade, idPublicador->Publicador, idMultimedia->Multimedia, idPagina->Pagina, idGrupo->Grupo) 
+**Publicacao**(<u>idPublicacao</u>->Atividade, idPublisher->Publisher, idMultimedia->Multimedia, idPage->Page, idGrupo->Grupo) 
 
-**Mensagem**(<u>idMensagem</u>->Atividade, dataEnvio, idMultimedia->Multimedia, idAutor->Utilizador, idConversa->Conversa)  
+**Mensagem**(<u>idMensagem</u>->Atividade, dataEnvio, idMultimedia->Multimedia, idAutor->User, idConversa->Conversa)  
 
 **Atividade**(<u>idAtividade</u>, texto, data)  
 
-**Conversa**(<u>idConversa</u>, nome)  
+**Conversa**(<u>idConversa</u>, name)  

@@ -1,227 +1,227 @@
 PRAGMA FOREIGN_KEYS = ON;
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(1, 'Jesus Solomon');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(1, 'Michael West');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(2, 'Zachary Griffith');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(2, 'Andrew Collins');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(3, 'Marilyn Mueller');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(3, 'Patrick Perez');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(4, 'Sarah Taylor');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(4, 'Matthew Hanson');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(5, 'John Small');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(5, 'Ronald Campbell');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(6, 'Reginald Fuentes');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(6, 'Manuel Walker');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(7, 'Megan Ward');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(7, 'Catherine Hill');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(8, 'Kathleen Velez');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(8, 'Jeanette Copeland');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(9, 'Debra Lloyd');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(9, 'Derrick Moore');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(10, 'David Wang');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(10, 'Erin Martinez');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(11, 'Wang, Gamble and Cortez');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(11, 'Wilson, Harvey and Young');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(12, 'Wilson LLC');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(12, 'Roth-Goodwin');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(13, 'Davis LLC');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(13, 'Anderson, Cox and Morgan');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(14, 'Leonard-Rodriguez');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(14, 'Rios-Brown');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(15, 'Brown, Lara and Simon');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(15, 'Estrada-Walters');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(16, 'Torres and Sons');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(16, 'Allen LLC');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(17, 'Rivas, Vargas and English');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(17, 'Mullen, White and Mcdonald');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(18, 'Murphy-Myers');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(18, 'Mcgrath LLC');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(19, 'Dean, Sharp and Mcdonald');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(19, 'Porter, Rojas and Vaughn');
 
-INSERT INTO Publicador('idPublicador', 'nome')
-	VALUES(20, 'Baker-Anderson');
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(20, 'Hood, Santiago and Estrada');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(1, '974335196', 'M', '1932-12-05', 87, '49470 Patricia Ways\nRachelton, WY 07004');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(1, '980697595', 'M', '1973-02-05', 47, '0008 Perkins Motorway\nDaniellebury, SD 81520');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(2, '921982274', 'M', '2003-10-12', 16, '1350 Lopez Spring\nHarrisburgh, GA 26463');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(2, '922571468', 'M', '1918-01-11', 102, '670 Elizabeth Squares Suite 044\nNew Kathytown, MI 74701');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(3, '956344333', 'F', '1990-01-21', 30, '4530 Anna Ranch\nEast Johnton, TN 57505');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(3, '937320884', 'M', '1966-07-11', 53, '3781 Jackson Camp Suite 816\nFloreshaven, AZ 14265');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(4, '924044361', 'F', '1919-04-22', 100, '745 Turner Run Apt. 468\nPageborough, NC 43246');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(4, '908529263', 'M', '1918-10-12', 101, '37630 Jessica Spring\nSmithburgh, AK 09400');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(5, '953830554', 'M', '1910-08-03', 109, '4750 Brittney Island Suite 429\nBrownborough, IA 33013');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(5, '915811111', 'M', '2000-01-30', 20, 'USNV Wilson\nFPO AP 96157');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(6, '928967463', 'M', '1921-12-16', 98, '3568 Wendy Freeway\nKatiemouth, SD 21792');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(6, '993072417', 'M', '1949-12-10', 70, '2062 Baird Center\nKrystalmouth, FL 08875');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(7, '963408573', 'F', '1932-05-18', 87, '99380 Guzman Corners Suite 256\nThompsonberg, IL 71352');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(7, '912644941', 'F', '1990-10-30', 29, '413 Robinson Points Suite 105\nPaulburgh, NY 10617');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(8, '908553485', 'F', '1982-03-07', 38, '17142 Ramirez Port\nLake Savannah, ID 08848');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(8, '996930149', 'F', '1956-07-24', 63, '410 Christopher Knoll Suite 882\nDavishaven, MO 11584');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(9, '945017987', 'F', '1946-09-24', 73, '87696 Kennedy Spurs\nEast Savannah, TX 58369');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(9, '943006723', 'M', '1941-11-17', 78, '080 Christina Park\nSouth Brianside, NE 52034');
 
-INSERT INTO Utilizador('idUtilizador', 'numeroTelemovel', 'genero', 'dataNascimento', 'idade', 'morada')
-	VALUES(10, '992458368', 'M', '1940-07-26', 79, '4995 Casey Track\nMcgeefurt, ND 23859');
+INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
+	VALUES(10, '970974344', 'F', '1961-09-01', 58, '01957 Sheryl Well Suite 275\nWest Rodneyland, OR 17921');
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(11, 'https://www.clark.com/blog/main/about.jsp', 3);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(11, 'https://baker.com/search.php', 10);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(12, 'https://chen.com/search/', 3);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(12, 'http://www.huffman-payne.com/tag/terms.htm', 5);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(13, 'https://www.park.com/main.html', 1);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(13, 'https://www.houston.com/wp-content/wp-content/categories/home.htm', 10);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(14, 'http://www.andrews.com/index/', 6);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(14, 'http://alexander-williams.com/', 2);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(15, 'https://www.clark-zavala.com/', 8);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(15, 'https://www.valenzuela-holmes.com/', 4);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(16, 'http://jones.com/', 5);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(16, 'http://bowman.com/privacy.htm', 6);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(17, 'http://butler.org/privacy.htm', 6);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(17, 'https://www.hill.biz/homepage/', 8);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(18, 'http://morse.net/', 9);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(18, 'https://barnett.info/categories/app/categories/home.html', 2);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(19, 'http://www.conner.com/about.htm', 6);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(19, 'https://www.garcia-martin.biz/', 9);
 
-INSERT INTO Pagina('idPagina', 'website', 'idAdministrador')
-	VALUES(20, 'https://lara.biz/faq.htm', 10);
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(20, 'https://esparza.org/', 3);
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(21, 'available', 'http://www.hall-hayes.org/', 2844, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(21, 'sit', 'https://benson.com/', 3770, '.mp3');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(22, 'sea', 'http://buchanan-anderson.com/', 943, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(22, 'particularly', 'http://www.clarke-ramirez.com/', 1669, '.mp3');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(23, 'believe', 'https://www.harding-sullivan.com/', 2997, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(23, 'process', 'http://www.thompson.com/', 550, '.mp3');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(24, 'simple', 'http://www.taylor.com/', 308, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(24, 'picture', 'https://www.kirby-glass.info/', 593, '.mp3');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(25, 'relate', 'http://www.trevino.net/', 3597, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(25, 'final', 'https://www.freeman.com/', 3787, '.mp3');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(26, 'head', 'https://wolf.org/', 3191, '.jpg');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(26, 'finally', 'https://carrillo.com/', 2472, '.jpg');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(27, 'card', 'http://weber.info/', 158, '.jpg');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(27, 'process', 'https://www.riley.org/', 3428, '.jpg');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(28, 'offer', 'https://hoover-diaz.org/', 3489, '.jpg');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(28, 'enjoy', 'https://www.burns.com/', 1341, '.jpg');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(29, 'visit', 'http://knapp.info/', 1353, '.jpg');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(29, 'bill', 'http://www.watson-king.info/', 3278, '.jpg');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(30, 'course', 'https://shah-coleman.com/', 3537, '.jpg');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(30, 'sense', 'https://www.bishop-smith.info/', 1908, '.jpg');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(31, 'me', 'https://jackson-williams.net/', 2707, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(31, 'other', 'http://cunningham-lee.org/', 189, '.mp4');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(32, 'fear', 'http://www.beard-duffy.com/', 3153, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(32, 'themselves', 'http://www.porter.net/', 2118, '.mp4');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(33, 'simply', 'http://scott.org/', 3248, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(33, 'institution', 'https://www.rose.com/', 1493, '.mp4');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(34, 'professor', 'http://phillips.com/', 133, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(34, 'sound', 'https://sampson.biz/', 1658, '.mp4');
 
-INSERT INTO Multimedia('idMultimedia', 'titulo', 'url', 'tamanho', 'formato')
-	VALUES(35, 'door', 'http://www.gill.com/', 2965, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
+	VALUES(35, 'former', 'http://stewart-brooks.info/', 2370, '.mp4');
 
-INSERT INTO Audio('idAudio', 'duracao')
-	VALUES(21, 116);
+INSERT INTO Audio('audioID', 'length')
+	VALUES(21, 28);
 
-INSERT INTO Audio('idAudio', 'duracao')
-	VALUES(22, 165);
+INSERT INTO Audio('audioID', 'length')
+	VALUES(22, 150);
 
-INSERT INTO Audio('idAudio', 'duracao')
-	VALUES(23, 63);
+INSERT INTO Audio('audioID', 'length')
+	VALUES(23, 92);
 
-INSERT INTO Audio('idAudio', 'duracao')
-	VALUES(24, 65);
+INSERT INTO Audio('audioID', 'length')
+	VALUES(24, 197);
 
-INSERT INTO Audio('idAudio', 'duracao')
-	VALUES(25, 32);
+INSERT INTO Audio('audioID', 'length')
+	VALUES(25, 176);
 
-INSERT INTO Imagem('idImagem')
+INSERT INTO Image('imageID')
 	VALUES(26);
 
-INSERT INTO Imagem('idImagem')
+INSERT INTO Image('imageID')
 	VALUES(27);
 
-INSERT INTO Imagem('idImagem')
+INSERT INTO Image('imageID')
 	VALUES(28);
 
-INSERT INTO Imagem('idImagem')
+INSERT INTO Image('imageID')
 	VALUES(29);
 
-INSERT INTO Imagem('idImagem')
+INSERT INTO Image('imageID')
 	VALUES(30);
 
-INSERT INTO Video('idVideo', 'duracao')
-	VALUES(31, 291);
+INSERT INTO Video('videoID', 'length')
+	VALUES(31, 70);
 
-INSERT INTO Video('idVideo', 'duracao')
-	VALUES(32, 181);
+INSERT INTO Video('videoID', 'length')
+	VALUES(32, 114);
 
-INSERT INTO Video('idVideo', 'duracao')
-	VALUES(33, 96);
+INSERT INTO Video('videoID', 'length')
+	VALUES(33, 258);
 
-INSERT INTO Video('idVideo', 'duracao')
-	VALUES(34, 89);
+INSERT INTO Video('videoID', 'length')
+	VALUES(34, 229);
 
-INSERT INTO Video('idVideo', 'duracao')
-	VALUES(35, 102);
+INSERT INTO Video('videoID', 'length')
+	VALUES(35, 207);
 
-INSERT INTO Evento('idEvento', 'nome', 'descricao', 'dataRealizacao', 'idCriador')
-	VALUES(36, 'Democrat Sort City Choice.', 'Technology within work. Ahead enough down create.\nPay value cause sure chair ground account dinner. Her pattern painting put cut. Foot avoid me across central marriage. Hand space industry after.', '2020-04-15 06:54:27', 4);
+INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
+	VALUES(36, 'Than Both Guy Fly Too Southern Bar.', 'Energy until sell. Public interview mind by require section. Ok sport impact maintain as campaign week.\nToward boy feel oil draw add outside age. Spring treat move itself behavior defense.', '2020-04-04 01:48:03', 7);
 
-INSERT INTO Evento('idEvento', 'nome', 'descricao', 'dataRealizacao', 'idCriador')
-	VALUES(37, 'General Key Stock Expect Player Rock Similar.', 'Close nation career better history simple situation. Agency compare close statement full.\nFear live use stop. Trip leg town. Nor appear example marriage magazine phone.', '2020-04-21 20:05:43', 8);
+INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
+	VALUES(37, 'Section Audience Paper Direction Over Animal Statement.', 'Find hotel hold would. Image lose can simple still skin. Hope station bar agent girl yourself.\nEasy high whom moment. Itself can meeting help choose environment.', '2020-04-28 20:09:14', 9);
 
-INSERT INTO Evento('idEvento', 'nome', 'descricao', 'dataRealizacao', 'idCriador')
-	VALUES(38, 'Attorney Beat Movie Though Friend During Actually Public.', 'Change week more later. Fire woman finally nice authority. Picture all form important its.', '2020-04-01 15:16:12', 6);
+INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
+	VALUES(38, 'Mouth Economy These Out Nation.', 'Particular nor issue chair skin because study. Daughter artist natural.\nWish prevent red recognize collection theory majority house. Mind conference these teach serious month director.', '2020-04-17 00:15:22', 8);
 
-INSERT INTO Evento('idEvento', 'nome', 'descricao', 'dataRealizacao', 'idCriador')
-	VALUES(39, 'Ever Real Young Cut.', 'Line although player push but. Sometimes itself administration beyond society feeling. Money person report year push father. Information walk talk institution else wonder sell.', '2020-04-22 20:48:48', 2);
+INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
+	VALUES(39, 'Other Indeed Appear Customer Air Race.', 'Energy important two growth visit simply none. Argue here travel issue clear their. Everybody them brother.\nSafe old grow PM dark. Second article check meet few during.', '2020-04-30 03:17:58', 9);
 
-INSERT INTO Evento('idEvento', 'nome', 'descricao', 'dataRealizacao', 'idCriador')
-	VALUES(40, 'Soldier Among Soon Agree Near.', 'Accept stand part market per stage. Moment future decide out person family represent. Despite task democratic receive growth south.', '2020-04-30 02:47:02', 2);
+INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
+	VALUES(40, 'Edge Whose Final Spring Art Decision Near.', 'Seek rest region safe spend stop police home. Miss site attention newspaper someone.\nIndividual own chair single. Common marriage explain nice score move during. Team operation month stage first.', '2020-04-08 12:13:12', 1);
 
