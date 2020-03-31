@@ -16,9 +16,9 @@
 
 **Grupo**(<u>idGrupo</u>, nome, idAdministrador->Utilizador)  
 
-**Evento**(<u>idEvento</u>, descricao, dataRealizacao, idCriador->Utilizador)  
+**Evento**(<u>idEvento</u>, nome, descricao, dataRealizacao, idCriador->Utilizador)  
 
-**Multimedia**(<u>idMensagem</u>, titulo, url, tamanho, formato)  
+**Multimedia**(<u>idMultimedia</u>, titulo, url, tamanho, formato)  
 
 **Audio**(<u>idAudio</u>->Multimedia, duracao)
 
