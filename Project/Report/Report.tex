@@ -1,9 +1,13 @@
-\documentclass{report}
+\documentclass[12pt]{report}
 \usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[a4paper, total={7in, 10in}]{geometry}
+
 \graphicspath{ {./Images/} }
+
+\setlength{\parskip}{0.2em}
+\renewcommand{\baselinestretch}{1.2}
 
 \begin{document}
 
@@ -100,7 +104,7 @@ Um \textbf{comentário} é feito por um \textbf{utilizador} a uma \textbf{public
 
 Um utilizador nem sempre tem de se manifestar com mensagens ou comentários, podendo optar por simplesmente deixar uma \textbf{Reação}. Para tal, terá a opção de escolher uma das seguintes \textbf{reações}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{reactions}
 \end{figure}
@@ -134,41 +138,113 @@ Um grupo possui como função agregar diversos utilizadores com um interesse em 
 
 \textbf{Publisher}(\underline{publisherID}, name)
 
+publisherID $\rightarrow$ name
+
+\vspace{2mm}
+
 \textbf{User}(\underline{userID} $\rightarrow$ Publisher, phoneNumber, gender, birthDate, age, address)
+
+userID $\rightarrow$ phoneNumber, gender, birthDate, age, address
+
+birthDate $\rightarrow$ age
+
+\vspace{2mm}
 
 \textbf{Friendship}(\underline{senderID} $\rightarrow$ User, \underline{receiverID} $\rightarrow$ User, state, date)
 
+senderID $\rightarrow$ state, date
+
+\vspace{2mm}
+
 \textbf{Page}(\underline{pageID} $\rightarrow$ Publisher, website, adminID $\rightarrow$ User)
+
+pageID $\rightarrow$ website, adminID
+
+\vspace{2mm}
 
 \textbf{PageFollower}(\underline{followerID} $\rightarrow$ User, pageID)
 
+\vspace{2mm}
+
 \textbf{Group}(\underline{groupID}, name, adminID $\rightarrow$ User)
+
+groupID $\rightarrow$ name, adminID
+
+\vspace{2mm}
 
 \textbf{GroupMember}(\underline{memberID} $\rightarrow$ User, \underline{groupID} $\rightarrow$ Group)
 
+\vspace{2mm}
+
 \textbf{Chat}(\underline{chatID}, name)
+
+chatID $\rightarrow$ name
+
+\vspace{2mm}
 
 \textbf{ChatParticipant}(\underline{participantID} $\rightarrow$ User, chatID $\rightarrow$ Chat, nickname)
 
+participantID, chatID $\rightarrow$ nickname
+
+\vspace{2mm}
+
 \textbf{Multimedia}(\underline{multimediaID}, title, uri, size, format)
+
+multimediaID $\rightarrow$ title, uri, size, format
+
+\vspace{2mm}
 
 \textbf{Audio}(\underline{audioID} $\rightarrow$ Multimedia, length)
 
+audioID $\rightarrow$ length
+
+\vspace{2mm}
+
 \textbf{Image}(\underline{imageID} $\rightarrow$ Multimedia)
 
-\textbf{Video}(\underline{videoID} $\rightarrow$ Multimedia)
+\vspace{2mm}
+
+\textbf{Video}(\underline{videoID} $\rightarrow$ Multimedia, length)
+
+videoID $\rightarrow$ length
+
+\vspace{2mm}
 
 \textbf{Activity}(\underline{activityID}, text, date)
 
+activityID $\rightarrow$ text, date
+
+\vspace{2mm}
+
 \textbf{Message}(\underline{messageID} $\rightarrow$ Activity, dateSent, multimediaID $\rightarrow$ Multimedia, authorID $\rightarrow$ User, chatID $\rightarrow$ Chat)
+
+messageID $\rightarrow$ dateSent, multimediaID, authorID, chatID
+
+\vspace{2mm}
 
 \textbf{Post}(\underline{postID}, publisherID $\rightarrow$ Publisher, multimediaID $\rightarrow$ Multimedia, pageID $\rightarrow$ Page, groupID $\rightarrow$ Group)
 
+postID $\rightarrow$ publisherID, multimediaID, pageID, groupID
+
+\vspace{2mm}
+
 \textbf{Comment}(\underline{commentID}, authorID $\rightarrow$ User, postID $\rightarrow$ Post)
+
+commentID $\rightarrow$ authorID, postID
+
+\vspace{2mm}
 
 \textbf{Reaction}(\underline{activityID} $\rightarrow$ Activity, \underline{userID} $\rightarrow$ User, type)
 
+activityID, userID $\rightarrow$ type
+
+\vspace{2mm}
+
 \textbf{Event}(\underline{eventID}, name, description, occurenceDate, creatorID $\rightarrow$ User)
+
+eventID $\rightarrow$ name, description, occurenceDate, creatorID
+
+\vspace{2mm}
 
 \textbf{EventParticipant}(\underline{participantID} $\rightarrow$ User, \underline{eventID} $\rightarrow$ Event)
 
