@@ -17,7 +17,7 @@ relations_attributes = {
     "ParticipanteEvent": ("idParticipante", "idEvent"),
     "SeguidorPage": ("idSeguidor", "idPage"),
     "GroupMember": ("idMembro", "idGrupo"),
-    "Group": ("idGrupo", "name", "idAdministrador"),
+    '"Group"': ("groupID", "name", "adminID"),
     "Event": ("eventID", "name", "description", "occurrenceDate", "creatorID"),
     "Multimedia": ("multimediaID", "title", "uri", "size", "format"),
     "Audio":("audioID", "length"),
@@ -34,7 +34,7 @@ result = {
     "Publisher": [],
     "User": [],
     "Page": [],
-    "Group": [],
+    '"Group"': [],
     "Audio": [],
     "Image": [],
     "Video": [],
@@ -113,7 +113,7 @@ def group(id):
     
     values = (id, name, adminID)
     
-    insert_into("Group", values)
+    insert_into('"Group"', values)
 
 # Audio
 def audio(id):
@@ -177,40 +177,53 @@ def Post(id):
     values = (id, publisherID, mediaID, pageID, groupID)
     
     insert_into("Post", values)
-       
+    
 TOTAL_RANGE = 1
 USER_RANGE = 10
 PAGE_RANGE = 10
+GROUP_RANGE = 5
 AUDIO_RANGE = 5
 IMAGE_RANGE= 5
 VIDEO_RANGE = 5
 EVENT_RANGE = 5
     
+# Create commands for Users
 for i in range(TOTAL_RANGE, TOTAL_RANGE + USER_RANGE): 
     publisher(i, user(i))
     
 TOTAL_RANGE += USER_RANGE
 
+# Create commands for Pages
 for i in range(TOTAL_RANGE, TOTAL_RANGE + PAGE_RANGE): 
     publisher(i, page(i))
     
 TOTAL_RANGE += PAGE_RANGE
     
+# Create commands for Groups
+for i in range(TOTAL_RANGE, TOTAL_RANGE + GROUP_RANGE): 
+    group(i)
+    
+TOTAL_RANGE += GROUP_RANGE
+
+# Create commands for Audio
 for i in range(TOTAL_RANGE, TOTAL_RANGE + AUDIO_RANGE): 
     multimedia(i, audio(i))
     
 TOTAL_RANGE += AUDIO_RANGE
     
+# Create commands for Images
 for i in range(TOTAL_RANGE, TOTAL_RANGE + IMAGE_RANGE): 
     multimedia(i, image(i))
     
 TOTAL_RANGE += IMAGE_RANGE
     
+# Create commands for Videos
 for i in range(TOTAL_RANGE, TOTAL_RANGE + VIDEO_RANGE): 
     multimedia(i, video(i))
     
 TOTAL_RANGE += VIDEO_RANGE
     
+# Create commands for Events
 for i in range(TOTAL_RANGE, TOTAL_RANGE + EVENT_RANGE): 
     event(i)
 
@@ -227,8 +240,8 @@ for User in result["User"]:
 for page in result["Page"]:
     f.write(page)
     
-# for group in result["Group"]:
-#     f.write(group)
+for group in result['"Group"']:
+    f.write(group)
     
 for multimedia in result["Multimedia"]:
     f.write(multimedia)

@@ -2,10 +2,8 @@
 \usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{float}
-\graphicspath{ {./Imagens/} }
-
-\setlength{\parindent}{4em}
-\setlength{\parskip}{0.5em}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\graphicspath{ {./Images/} }
 
 \begin{document}
 
@@ -26,60 +24,9 @@
 
 \chapter{Introdução}
 
-O nosso projeto consiste numa rede social denominada \textit{FEUPBook} (inspirado pela já existente rede socal,  \textit{Facebook}). Nesta, utilizadores poderão criar uma conta pessoal para falar uns com os outros, através da troca de mensagens de texto e ver diversas publicações do seu interesse no seu \textit{feed} (a página inicial), bem como organizar eventos, juntarem-se em grupos ou edificar uma página dedicada a algum assunto em particular.
+O nosso projeto consiste numa rede social denominada \textit{FEUPBook} (inspirado pela já existente rede social,  \textit{Facebook}). Nesta, utilizadores poderão criar uma conta pessoal para falar uns com os outros, através da troca de mensagens de texto e ver diversas publicações do seu interesse no seu \textit{feed} (a página inicial), bem como organizar \textbf{eventos}, juntarem-se em \textbf{grupos} ou edificar uma \textbf{página} dedicada a algum assunto em particular.
 
 \chapter{Especificação} 
-
-\section{Multimédia}
-
-A rede social do nosso projeto possui a capacidade de partilhar ficheiros \textbf{multimédia}, quer seja através de mensagens ou publicações e dividem-se essencialmente em três \textbf{categorias}, áudio, imagem e vídeo. Cada ficheiro destes possui um \underline{título}, correspondente ao seu nome em memória, bem como um \underline{url} que indica a localização do ficheiro para lhe aceder. \par
-
-É possível, no entanto, enviar qualquer tipo de ficheiros, não só áudio, imagem ou vídeo, porém se a sua extensão não corresponder a nenhum deste tipo de ficheiros, será enviado como um ficheiro binário que o utilizador pode descarregar. \par
-
-Existe ainda um limite máximo do tamanho ficheiro que o utilizador pode enviar e é de 25 MB. \par
-
-Tanto o \textbf{áudio} como \textbf{vídeo} possuem um \underline{comprimento} da sua duração em segundos.
-
-\section{Atividade}
-
-Vários conteúdos na rede social terão \textbf{reações} por parte dos \textbf{utilizadores}, como tal, esta classe tem o objetivo de agregar esses mesmos conteúdos e manter o registo das reações que possuem. \par
-
-Cada um desses conteúdos possui \underline{texto} a acompanhá-los e a \underline{data} em que foram efetuados.
-
-\subsection{Mensagem}
-
-Uma \textbf{mensagem} é o modo como os utilizadores comunicam numa \underline{conversa}. \par
-
-Pode ser uma mensagem de texto, a partilha de um ficheiro multimédia ou ambos, ou seja, um utilizador pode enviar um ficheiro multimédia com descrição (texto), sem descrição, ou só uma mensagem de texto. \par
-
-\subsection{Publicação}
-
-Não só com \textbf{mensagens} é possível comunicar na rede social, mas também com \textbf{publicações}. Possuem o benefício de não serem tão privadas (não precisam de ter um destinatário em particular, ficando publicadas no perfil do \textbf{publicador} em questão que seja o autor da \textbf{publicação}). \par
-
-Esta pode ser composta por multimédia (áudio, foto ou vídeo) de tipos iguais ou diferentes. \par
-
-Agrega ainda vários comentários feitos por utilizadores que pretendam demonstrar a sua opinião em relação à mesma. \par
-
-\subsection{Comentário}
-
-Um \textbf{comentário} é feito por um \textbf{utilizador} a uma \textbf{publicação} como modo de iniciar uma discussão sobre a publicação ou simplesmente realizar algum tipo de observação/denotação. \par
-
-\section{Reação}
-
-Um utilizador nem sempre tem de se manifestar com mensagens ou comentários, podendo optar por simplesmente deixar uma \textbf{Reação}. Para tal, terá a opção de escolher uma das seguintes \textbf{reações}.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{reactions}
-\end{figure}
-
-Por definição, a reação padrão será o \textit{like}. \par
-
-Um \textbf{utilizador} apenas pode reagir com uma das possíveis reações a um post ou comentários, mas estes podem ter reações de vários utilizadores, inclusive dos seus autores.
-
-\section{Localização}
-
-Muitas vezes será apropriada identificar a \textbf{localização} de um acontecimento (como um evento, onde uma foto foi tirada, onde mora uma pessoa...) e como tal foi criada esta classe que agrega \underline{país}, \underline{código postal} e \underline{cidade}.
 
 \section{Publicador}
 
@@ -107,16 +54,6 @@ Os utilizadores relacionam-se com um página na medida em que um deles é o seu 
 
 Tem um \underline{utilizador} que é o seu administrador e pode ter muitos seguidores(utilizadores).
 
-\subsection{Grupo}
-
-Um grupo possui como função agregar diversos utilizadores com um interesse em comum. Um utilizador fazendo parte de um grupo, está habilitado a fazer uma publicação, estando esta visível para os restantes membros do grupo. Um grupo tem um utilizador como administrador.
-
-\section{Evento}
-
-Se um \textbf{utilizador} desejar, pode criar um \textbf{evento} para marcar um \textbf{acontecimento} relevante e convidar outros utilizadores a participarem no mesmo. \par
-
-Um \textbf{evento} possui um \underline{nome} que o identifica, bem como uma breve \underline{descrição} do que se trata e, possivelmente, o local onde se realiza,r e a \underline{data} da sua realização.
-
 \section{Conversa}
 
 Numa \textbf{rede social} é indispensável a capacidade de os utilizadores conversarem entre si, como tal estes podem agregar-se numa \underline{conversa} (que possui no mínimo 2 utilizadores). \par
@@ -125,11 +62,114 @@ Uma \textbf{conversa} é composta por diversas \underline{mensagens}. \par
 
 Ainda neste contexto, cada utilizador pode possuir uma \underline{alcunha} própria.
 
+\section{Multimédia}
+
+A rede social do nosso projeto possui a capacidade de partilhar ficheiros \textbf{multimédia}, quer seja através de mensagens ou publicações e dividem-se essencialmente em três \textbf{categorias}, áudio, imagem e vídeo. Cada ficheiro destes possui um \underline{título}, correspondente ao seu nome em memória, bem como um \underline{url} que indica a localização do ficheiro para lhe aceder. \par
+
+É possível, no entanto, enviar qualquer tipo de ficheiros, não só áudio, imagem ou vídeo, porém se a sua extensão não corresponder a nenhum deste tipo de ficheiros, será enviado como um ficheiro binário que o utilizador pode descarregar. \par
+
+Existe ainda um limite máximo do tamanho ficheiro que o utilizador pode enviar e é de 25 MB. \par
+
+Tanto o \textbf{áudio} como \textbf{vídeo} possuem um \underline{comprimento} da sua duração em segundos.
+
+\section{Atividade}
+
+Vários conteúdos na rede social terão \textbf{reações} por parte dos \textbf{utilizadores}, como tal, esta classe tem o objetivo de agregar esses mesmos conteúdos e manter o registo das reações que possuem. \par
+
+Cada um desses conteúdos possui \underline{texto} a acompanhá-los e a \underline{data} em que foram efetuados.
+
+\subsection{Publicação}
+
+Não só com \textbf{mensagens} é possível comunicar na rede social, mas também com \textbf{publicações}. Possuem o benefício de não serem tão privadas (não precisam de ter um destinatário em particular, ficando publicadas no perfil do \textbf{publicador} em questão que seja o autor da \textbf{publicação}). \par
+
+Esta pode ser composta por multimédia (áudio, foto ou vídeo) de tipos iguais ou diferentes. \par
+
+Agrega ainda vários comentários feitos por utilizadores que pretendam demonstrar a sua opinião em relação à mesma. \par
+
+\subsection{Mensagem}
+
+Uma \textbf{mensagem} é o modo como os utilizadores comunicam numa \underline{conversa}. \par
+
+Pode ser uma mensagem de texto, a partilha de um ficheiro multimédia ou ambos, ou seja, um utilizador pode enviar um ficheiro multimédia com descrição (texto), sem descrição, ou só uma mensagem de texto. \par
+
+\subsection{Comentário}
+
+Um \textbf{comentário} é feito por um \textbf{utilizador} a uma \textbf{publicação} como modo de iniciar uma discussão sobre a publicação ou simplesmente realizar algum tipo de observação/denotação. \par
+
+\section{Reação}
+
+Um utilizador nem sempre tem de se manifestar com mensagens ou comentários, podendo optar por simplesmente deixar uma \textbf{Reação}. Para tal, terá a opção de escolher uma das seguintes \textbf{reações}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{reactions}
+\end{figure}
+
+\section{Evento}
+
+Se um \textbf{utilizador} desejar, pode criar um \textbf{evento} para marcar um \textbf{acontecimento} relevante e convidar outros utilizadores a participarem no mesmo. \par
+
+Um \textbf{evento} possui um \underline{nome} que o identifica, bem como uma breve \underline{descrição} do que se trata e, possivelmente, o local onde se realiza,r e a \underline{data} da sua realização.
+
+Por definição, a reação padrão será o \textit{like}. \par
+
+Um \textbf{utilizador} apenas pode reagir com uma das possíveis reações a um post ou comentários, mas estes podem ter reações de vários utilizadores, inclusive dos seus autores.
+
+\section{Localização}
+
+Muitas vezes será apropriada identificar a \textbf{localização} de um acontecimento (como um evento, onde uma foto foi tirada, onde mora uma pessoa...) e como tal foi criada esta classe que agrega \underline{país}, \underline{código postal} e \underline{cidade}.
+
+\subsection{Grupo}
+
+Um grupo possui como função agregar diversos utilizadores com um interesse em comum. Um utilizador fazendo parte de um grupo, está habilitado a fazer uma publicação, estando esta visível para os restantes membros do grupo. Um grupo tem um utilizador como administrador.
+
 \chapter{Modelo concetual}
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{diagram}
 \end{figure}
+
+\chapter{Modelo relacional}
+
+\textbf{Publisher}(\underline{publisherID}, name)
+
+\textbf{User}(\underline{userID} $\rightarrow$ Publisher, phoneNumber, gender, birthDate, age, address)
+
+\textbf{Friendship}(\underline{senderID} $\rightarrow$ User, \underline{receiverID} $\rightarrow$ User, state, date)
+
+\textbf{Page}(\underline{pageID} $\rightarrow$ Publisher, website, adminID $\rightarrow$ User)
+
+\textbf{PageFollower}(\underline{followerID} $\rightarrow$ User, pageID)
+
+\textbf{Group}(\underline{groupID}, name, adminID $\rightarrow$ User)
+
+\textbf{GroupMember}(\underline{memberID} $\rightarrow$ User, \underline{groupID} $\rightarrow$ Group)
+
+\textbf{Chat}(\underline{chatID}, name)
+
+\textbf{ChatParticipant}(\underline{participantID} $\rightarrow$ User, chatID $\rightarrow$ Chat, nickname)
+
+\textbf{Multimedia}(\underline{multimediaID}, title, uri, size, format)
+
+\textbf{Audio}(\underline{audioID} $\rightarrow$ Multimedia, length)
+
+\textbf{Image}(\underline{imageID} $\rightarrow$ Multimedia)
+
+\textbf{Video}(\underline{videoID} $\rightarrow$ Multimedia)
+
+\textbf{Activity}(\underline{activityID}, text, date)
+
+\textbf{Message}(\underline{messageID} $\rightarrow$ Activity, dateSent, multimediaID $\rightarrow$ Multimedia, authorID $\rightarrow$ User, chatID $\rightarrow$ Chat)
+
+\textbf{Post}(\underline{postID}, publisherID $\rightarrow$ Publisher, multimediaID $\rightarrow$ Multimedia, pageID $\rightarrow$ Page, groupID $\rightarrow$ Group)
+
+\textbf{Comment}(\underline{commentID}, authorID $\rightarrow$ User, postID $\rightarrow$ Post)
+
+\textbf{Reaction}(\underline{activityID} $\rightarrow$ Activity, \underline{userID} $\rightarrow$ User, type)
+
+\textbf{Event}(\underline{eventID}, name, description, occurenceDate, creatorID $\rightarrow$ User)
+
+\textbf{EventParticipant}(\underline{participantID} $\rightarrow$ User, \underline{eventID} $\rightarrow$ Event)
 
 \end{document}
