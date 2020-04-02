@@ -21,7 +21,7 @@ DROP TABLE IF EXISTS Friendship;
 CREATE TABLE Friendship (
     senderID INTEGER REFERENCES User(userID),
     receiverID INTEGER REFERENCES User(userID),
-    state INTEGER, --??????
+    state INTEGER, 
     date DATE,
     PRIMARY KEY (senderID, receiverID)
 );

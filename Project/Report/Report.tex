@@ -119,10 +119,6 @@ Por definição, a reação padrão será o \textit{like}. \par
 
 Um \textbf{utilizador} apenas pode reagir com uma das possíveis reações a um post ou comentários, mas estes podem ter reações de vários utilizadores, inclusive dos seus autores.
 
-\section{Localização}
-
-Muitas vezes será apropriada identificar a \textbf{localização} de um acontecimento (como um evento, onde uma foto foi tirada, onde mora uma pessoa...) e como tal foi criada esta classe que agrega \underline{país}, \underline{código postal} e \underline{cidade}.
-
 \subsection{Grupo}
 
 Um grupo possui como função agregar diversos utilizadores com um interesse em comum. Um utilizador fazendo parte de um grupo, está habilitado a fazer uma publicação, estando esta visível para os restantes membros do grupo. Um grupo tem um utilizador como administrador.
@@ -247,5 +243,152 @@ eventID $\rightarrow$ name, description, occurenceDate, creatorID
 \vspace{2mm}
 
 \textbf{EventParticipant}(\underline{participantID} $\rightarrow$ User, \underline{eventID} $\rightarrow$ Event)
+
+\chapter{Restrições}
+
+\section{Publisher}
+
+\begin{itemize}
+    \item \textit{publisherID} é a primary key (key restriction, PRIMARY KEY);
+    \item \textit{name} é o nome do Publicador e não pode ser nulo (NOT NULL).
+\end{itemize}
+
+\section{User}
+
+\begin{itemize}
+    \item \textit{userID} é primary key (key restriction, PRIMARY KEY), é foreign key (referential integrity, FOREIGN KEY) e não pode ser igual a nenhum atributo \textit{pageID} de \textit{Page}.
+    \item \textit{phoneNumber} é único a para cada utilizador (UNIQUE);
+    \item \textit{gender} apenas pode ter os valores ‘M’ (masculino) e ‘F’(feminino) (CHECK);
+    \item \textit{birthDate} não pode ter valores nulos (NOT NULL) e tem que originar uma idade superior a 13 anos (CHECK NOW() - birthDate / 365 $>$ 13)
+\end{itemize}
+
+\section{Page}
+
+\begin{itemize}
+    \item \textit{pageID} é a primary key (key restriction, PRIMARY KEY), é foreign key (referential integrity, FOREIGN KEY) e não pode ser igual a nenhum atríbuto idUtilizador de Utilizador.
+\end{itemize}
+
+\section{ChatParticipant}
+
+\begin{itemize}
+    \item (\textit{participantID}, \textit{chatID}) é a primary key (key restriction, PRIMARY KEY) and is a foreign key (referential integrity, FOREIGN KEY).
+\end{itemize}
+
+\section{Friendship}
+
+\begin{itemize}
+    \item (\textit{senderID}, \textit{receiverID}) é a primary key (key restriction, PRIMARY KEY), é foreign key (referential integrity, FOREIGN KEY) e têm que ser distintos;
+    \item \textit{date} corresponde à data do envio do pedido de amizade e não pode ter valor nulo (NOT NULL);
+    \item \textit{state} corresponde ao estado atual do pedido de amizade e apenas pode possuir os valores 1 (aceite), 2 (pendente) e 3 (rejeitada) (CHECK).
+\end{itemize}
+
+\section{EventParticipant}
+
+\begin{itemize}
+    \item (\textit{participantID}, \textit{eventID}) é a primary key (key restriction, PRIMARY KEY), é foreign key (referential integrity, FOREIGN KEY).
+\end{itemize}
+
+\section{PageFollower}
+
+\begin{itemize}
+    \item (\textit{followerID}, \textit{pageID}) é a primary key (key restriction, PRIMARY KEY), é foreign key (referential integrity, FOREIGN KEY).
+\end{itemize}
+
+\section{GroupMember}
+
+\begin{itemize}
+    \item (\textit{memberID}, \textit{groupID}) é a primary key (key restriction, PRIMARY KEY), é foreign key (referential integrity, FOREIGN KEY).
+\end{itemize}
+
+\section{Group}
+
+\begin{itemize}
+    \item \textit{groupID} é a primary key (key restriction, PRIMARY KEY);
+    \item \textit{name} corresponde ao nome do grupo e não pode ter valor nulo (NOT NULL);
+    \item \textit{adminID} é foreign key (referential integrity, FOREIGN KEY).
+\end{itemize}
+
+\section{Event}
+
+\begin{itemize}
+    \item \textit{eventID} é a primary key (key restriction, PRIMARY KEY);
+    \item \textit{name}  corresponde ao \textit{name} do evento e não pode ter valor nulo (NOT NULL);
+    \item descrição  corresponde à descrição do evento e não pode ter valor nulo (NOT NULL);
+    \item \textit{occurenceDate} corresponde à data em que o evento se realiza e não pode ter valor nulo (NOT NULL);
+    \item \textit{creatorID} é foreign key (referential integrity, FOREIGN KEY).
+\end{itemize}
+
+\section{Multimedia}
+
+\begin{itemize}
+    \item \textit{multimediaID} é primary key (key restriction, PRIMARY KEY);
+    \item \textit{size} só pode tomar valores inteiros positivos (CHECK);
+    \item \textit{type} pode tomar os seguintes valores: ".mp3", ".jpg", ".png", ".wav", ".mp4"... (CHECK).
+\end{itemize}
+
+\section{Audio}
+
+\begin{itemize}
+    \item \textit{audioID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY) e não pode ser igual a qualquer idImagem de Imagem e qualquer idVideo de Video;
+    \item \textit{length} só pode tomar valores inteiros positivos (CHECK).
+\end{itemize}
+
+\section{Image}
+
+\begin{itemize}
+    \item \textit{imageID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY) e não pode ser igual a qualquer idAudio de Audio e qualquer idVideo de Video.
+\end{itemize}
+
+\section{Video}
+
+\begin{itemize}
+    \item \textit{videoID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY) e não pode ser igual a qualquer idImagem de Imagem e qualquer idAudio de Audio;
+    \item \textit{length} só pode tomar valores inteiros positivos (CHECK).
+\end{itemize}
+
+\section{Reaction}
+
+\begin{itemize}
+    \item \textit{activityID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY);
+    \item \textit{userID} é foreign key (referential integrity, FOREIGN KEY);
+    \item \textit{type} representa as formas que a reação pode tomar e pode ter os seguinter valores: […] (CHECK).
+\end{itemize}
+
+\section{Comment}
+
+\begin{itemize}
+    \item \textit{commentID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY);
+    \item \textit{authorID} é foreign key (referential integrity, FOREIGN KEY);
+    \item \textit{postID} é foreign key (referential integrity, FOREIGN KEY).
+\end{itemize}
+
+\section{Post}
+
+\begin{itemize}
+    \item \textit{postID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY);
+    \item \textit{publisherID}, \textit{multimediaID}, \textit{pageID} e \textit{groupID} são foreign keys (referential integrity, FOREIGN KEY).
+\end{itemize}
+    
+\section{Message}
+
+\begin{itemize}
+    \item \textit{messageID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY);
+    \item \textit{multimediaID}, \textit{authorID} e \textit{chatID} é foreign key (referential integrity, FOREIGN KEY);
+    \item \textit{dateSent} corresponde à data de envio de uma mensagem e não pode ter valor nulo (NOT NULL).
+\end{itemize}
+
+\section{Activity}
+
+\begin{itemize}
+    \item \textit{activityID} é primary key (key restriction, PRIMARY KEY);
+    \item \textit{date} correponde à data em que a atividade foi realizada. (tem de ser antes do momento presente)
+\end{itemize}
+
+\section{Chat}
+
+\begin{itemize}
+    \item \textit{chatID} é primary key (key restriction, PRIMARY KEY);
+    \item \textit{name} correponde ao nome da conversa e não pode ser nulo (NOT NULL).
+\end{itemize}
 
 \end{document}
