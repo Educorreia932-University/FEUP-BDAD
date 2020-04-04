@@ -240,3 +240,374 @@ INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID
 INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
 	VALUES(45, 'Serve Raise Key Table Field Game.', 'Find present family and question certainly. Benefit glass thus choose. Compare stage behavior remain.', '2020-04-20 17:38:28', 7);
 
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,2,3,'2000-03-04');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,3,2,'2006-09-29');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,4,2,'1971-07-02');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,10,2,'1972-02-25');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(2,3,2,'1987-11-05');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(2,4,2,'2018-11-03');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(2,5,1,'2007-04-17');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(2,7,2,'1996-04-06');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(3,6,1,'2000-04-22');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(3,9,3,'1997-11-17');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(4,1,1,'1996-03-28');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(4,3,3,'1970-06-22');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(4,6,2,'2015-06-20');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(4,7,2,'1982-11-15');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(4,10,3,'1991-01-04');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(5,1,3,'2010-09-27');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(5,7,1,'1972-10-08');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(6,2,3,'1971-12-06');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(6,8,1,'2008-11-19');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(6,10,2,'1971-12-07');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(7,1,2,'2014-09-09');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(7,3,2,'1980-07-21');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(7,4,3,'1994-03-24');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(8,2,3,'2012-03-01');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(8,4,3,'1995-07-16');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(8,5,2,'2013-10-14');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(8,6,2,'1979-04-28');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(8,7,2,'1977-12-23');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(9,1,1,'2015-09-30');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(9,2,2,'2002-10-28');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(9,4,2,'2010-03-05');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(9,10,2,'1991-09-24');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(10,4,1,'2008-05-07');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(10,8,3,'1971-05-03');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(10,9,3,'2017-02-13');
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(4,41);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(7,41);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(2,41);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(6,42);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(4,42);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(7,42);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(10,42);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(3,43);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(5,43);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(2,43);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(4,44);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(2,44);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(3,45);
+
+INSERT INTO EventParticipant('participantID', 'eventID') VALUES(7,45);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(3,11);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(8,12);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(10,13);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(6,14);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(7,15);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(6,16);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(4,17);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(8,18);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(10,19);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(8,20);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(5,11);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(2,11);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(10,12);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(5,12);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(6,12);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(2,13);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(4,13);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(4,15);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(10,15);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(8,17);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(9,17);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(2,18);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(5,18);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(7,18);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(10,20);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(4,20);
+
+INSERT INTO PageFollower('followerID', 'pageID') VALUES(9,20);
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(46,'Serve also fact.','1970-09-08');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(47,'Science nation.','1988-10-16');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(48,'News whom grow.','1981-05-13');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(49,'Including.','1972-05-18');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(50,'Care history technology sport.','1988-08-31');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(51,'School and appear finally.','2006-05-20');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(52,'Just off must seven.','1995-09-26');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(53,'Because high wait manager too.','2003-07-04');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(54,'Yes guy woman third under art. Listen mother worker.','1997-01-10');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(55,'Instead keep for ball.','1972-06-02');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(56,'Be of evidence light.','1974-05-15');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(57,'Under late need.','1993-10-17');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(58,'Fast skin each.','1980-07-20');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(59,'Still operation draw account evening.','1976-08-21');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(60,'Training politics public.','2009-04-01');
+
+INSERT INTO Chat('chatID', 'name') VALUES(61,'Until recent low.');
+
+INSERT INTO Chat('chatID', 'name') VALUES(62,'Player form company.');
+
+INSERT INTO Chat('chatID', 'name') VALUES(63,'She difficult bring.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(1,61,'Avoid out.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(2,61,'Director left.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(2,62,'Stay ok safe.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(3,62,'Talk history.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(4,62,'Side ask sense.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(5,62,'Daughter son.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(6,63,'Tree special.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(7,63,'Guess ten.');
+
+INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(8,63,'Issue month.');
+
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(46,'1994-02-20',30,1,61);
+
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(47,'1986-05-27',37,4,62);
+
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(48,'1977-04-25',34,5,62);
+
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(49,'1986-10-19',38,7,63);
+
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(50,'1973-05-26',31,8,63);
+
+INSERT INTO GroupMember('memberID', 'groupID') VALUES(10,21);
+
+INSERT INTO GroupMember('memberID', 'groupID') VALUES(5,21);
+
+INSERT INTO GroupMember('memberID', 'groupID') VALUES(6,21);
+
+INSERT INTO GroupMember('memberID', 'groupID') VALUES(4,22);
+
+INSERT INTO GroupMember('memberID', 'groupID') VALUES(4,23);
+
+INSERT INTO GroupMember('memberID', 'groupID') VALUES(4,24);
+
+INSERT INTO GroupMember('memberID', 'groupID') VALUES(9,25);
+
+INSERT INTO Post('postID', 'publisherID','multimediaID','pageID','groupID') VALUES(51,7,30,15,NULL);
+
+INSERT INTO Post('postID', 'publisherID','multimediaID','pageID','groupID') VALUES(52,6,NULL,16,NULL);
+
+INSERT INTO Post('postID', 'publisherID','multimediaID','pageID','groupID') VALUES(53,4,NULL,NULL,24);
+
+INSERT INTO Post('postID', 'publisherID','multimediaID','pageID','groupID') VALUES(54,4,NULL,NULL,23);
+
+INSERT INTO Post('postID', 'publisherID','multimediaID','pageID','groupID') VALUES(55,9,NULL,NULL,25);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(56,8,55);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(57,8,52);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(58,4,52);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(59,4,55);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(60,7,53);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(46,9,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(46,5,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(46,8,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(46,6,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(46,2,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(47,7,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(47,4,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(47,5,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(47,9,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(47,10,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(47,3,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(48,6,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(48,1,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(48,10,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(48,3,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(49,8,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(49,6,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(49,2,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(49,3,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(49,1,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(50,3,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(50,5,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(50,2,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(50,10,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(50,4,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(51,1,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(51,7,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(51,10,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(51,8,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(52,6,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(52,9,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(52,2,4);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(52,4,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(52,1,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(52,5,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(53,2,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(53,7,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(53,5,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(53,6,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(54,6,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(54,10,1);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(55,2,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(55,10,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(56,2,4);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(56,3,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(56,10,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(56,9,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(57,6,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(57,10,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(59,3,4);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(59,2,4);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(59,7,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(59,8,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(59,4,4);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(59,10,6);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(60,10,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(60,4,5);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(60,6,3);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(60,8,2);
+
+INSERT INTO Reaction('activityID', 'userID','type') VALUES(60,3,3);
+
+

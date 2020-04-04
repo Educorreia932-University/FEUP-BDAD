@@ -132,6 +132,8 @@ Um grupo possui como função agregar diversos utilizadores com um interesse em 
 
 \chapter{Modelo relacional}
 
+\section{Dependências funcionais}
+
 \textbf{Publisher}(\underline{publisherID}, name)
 
 publisherID $\rightarrow$ name
@@ -244,6 +246,10 @@ eventID $\rightarrow$ name, description, occurenceDate, creatorID
 
 \textbf{EventParticipant}(\underline{participantID} $\rightarrow$ User, \underline{eventID} $\rightarrow$ Event)
 
+\section{Análise 3ª Forma Normal}
+
+\section{Análise Forma Normal de Boyce-Codd}
+
 \chapter{Restrições}
 
 \section{Publisher}
@@ -278,7 +284,7 @@ eventID $\rightarrow$ name, description, occurenceDate, creatorID
 
 \begin{itemize}
     \item (\textit{senderID}, \textit{receiverID}) é a primary key (key restriction, PRIMARY KEY), é foreign key (referential integrity, FOREIGN KEY) e têm que ser distintos;
-    \item \textit{date} corresponde à data do envio do pedido de amizade e não pode ter valor nulo (NOT NULL);
+    \item \textit{date} corresponde à data do envio do pedido de amizade CHECK(julianday(date) <= julianday('now')), tem de ser anterior ao momento atual e não pode ter valor nulo (NOT NULL);
     \item \textit{state} corresponde ao estado atual do pedido de amizade e apenas pode possuir os valores 1 (aceite), 2 (pendente) e 3 (rejeitada) (CHECK).
 \end{itemize}
 
