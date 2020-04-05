@@ -246,9 +246,19 @@ eventID $\rightarrow$ name, description, occurenceDate, creatorID
 
 \textbf{EventParticipant}(\underline{participantID} $\rightarrow$ User, \underline{eventID} $\rightarrow$ Event)
 
-\section{Análise 3ª Forma Normal}
+\section{Análise Forma Normal}
 
-\section{Análise Forma Normal de Boyce-Codd}
+De acordo com o modelo relacional apresentado, todas as relações respeitam a forma normal de Boyce-Codd e,  consequentemente, a 3ª forma normal com a exceção da Relação User. \par
+Em birthDate $\rightarrow$ age o elemento que se encontra do lado esquerdo da relação (birthDate) não é uma chave, constitundo deste modo uma violação à BCNF. No entanto, o lado direito da relação apenas é constituído por atributos primários fazendo com que respeite a 3ª forma normal, a qual exige que os atributos do lado esquerdo sejam chaves ou que o lado direito da relação seja apenas contituído por atributos primários. \par
+Uma possível solução para este problema seria decompor User do seguinte modo:
+
+\begin{itemize}
+    \item User1(birthDate, age)
+    birthDate $\rightarrow$ age
+    \item User2(id, birthDate, phoneNumber, gender, address)
+\end{itemize}
+
+Quanto às restantes relações, uma vez que do lado esquerdo das dependências funcionais se encontram chaves primárias é possível concluir que respeitam a forma normal de Boyce-Codd, e como a 3ª forma normal é um 'super set' desta última também a irão respeitar.
 
 \chapter{Restrições}
 
