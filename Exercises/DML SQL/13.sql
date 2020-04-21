@@ -1,0 +1,1 @@
+SELECT nome, COUNT(cod) FROM (prova NATURAL JOIN aluno) GROUP BY nr 

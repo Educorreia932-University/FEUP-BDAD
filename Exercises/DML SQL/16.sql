@@ -1,0 +1,1 @@
+SELECT nome, MAX(nota) FROM (prova NATURAL JOIN aluno) GROUP BY cod;

@@ -1,0 +1,1 @@
+SELECT nome FROM Aluno UNION SELECT nome FROM Prof

@@ -1,0 +1,1 @@
+SELECT curso, COUNT(cod) FROM cadeira GROUP BY curso 

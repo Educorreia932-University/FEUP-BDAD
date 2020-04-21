@@ -1,0 +1,1 @@
+SELECT cod, design FROM Cadeira WHERE curso="AC"

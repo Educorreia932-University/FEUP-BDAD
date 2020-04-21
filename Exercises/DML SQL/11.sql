@@ -1,0 +1,1 @@
+SELECT COUNT(nr) FROM aluno

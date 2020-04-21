@@ -1,0 +1,1 @@
+SELECT nome, AVG(nota) FROM (prova NATURAL JOIN aluno) GROUP BY nr

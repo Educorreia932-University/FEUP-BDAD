@@ -1,0 +1,1 @@
+SELECT AVG(c) FROM (SELECT COUNT(nr) AS c FROM prova GROUP BY nr)

@@ -1,0 +1,1 @@
+SELECT DISTINCT nome FROM (aluno NATURAL JOIN prova) NATURAL JOIN cadeira WHERE curso='IS';
