@@ -83,7 +83,7 @@ CREATE TABLE Multimedia (
 DROP TABLE IF EXISTS Audio;
 CREATE TABLE Audio (
     audioID INTEGER REFERENCES Multimedia(multimediaID),
-    length REAL NOT NULL CHECK(length > 0),
+    length INTEGER NOT NULL CHECK(length > 0),
     PRIMARY KEY (audioID)
 );
 
@@ -96,7 +96,7 @@ CREATE TABLE Image (
 DROP TABLE IF EXISTS Video;
 CREATE TABLE Video (
     videoID INTEGER REFERENCES Multimedia(multimediaID),
-    length REAL NOT NULL CHECK(length>0),
+    length INTEGER NOT NULL CHECK(length > 0),
     PRIMARY KEY (videoID)
 );
 

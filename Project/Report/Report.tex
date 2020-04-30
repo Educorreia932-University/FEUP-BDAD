@@ -150,7 +150,7 @@ birthDate $\rightarrow$ age
 
 \textbf{Friendship}(\underline{senderID} $\rightarrow$ User, \underline{receiverID} $\rightarrow$ User, state, date)
 
-senderID $\rightarrow$ state, date
+senderID, receiverID $\rightarrow$ state, date
 
 \vspace{2mm}
 
@@ -188,7 +188,9 @@ participantID, chatID $\rightarrow$ nickname
 
 \textbf{Multimedia}(\underline{multimediaID}, title, uri, size, format)
 
-multimediaID $\rightarrow$ title, uri, size, format
+multimediaID $\rightarrow$ title, uri, size, format  
+
+uri $\rightarrow$ title, size, format
 
 \vspace{2mm}
 
@@ -220,13 +222,13 @@ messageID $\rightarrow$ dateSent, multimediaID, authorID, chatID
 
 \vspace{2mm}
 
-\textbf{Post}(\underline{postID}, publisherID $\rightarrow$ Publisher, multimediaID $\rightarrow$ Multimedia, pageID $\rightarrow$ Page, groupID $\rightarrow$ Group)
+\textbf{Post}(\underline{postID} $\rightarrow$ Activity, publisherID $\rightarrow$ Publisher, multimediaID $\rightarrow$ Multimedia, pageID $\rightarrow$ Page, groupID $\rightarrow$ Group)
 
 postID $\rightarrow$ publisherID, multimediaID, pageID, groupID
 
 \vspace{2mm}
 
-\textbf{Comment}(\underline{commentID}, authorID $\rightarrow$ User, postID $\rightarrow$ Post)
+\textbf{Comment}(\underline{commentID} $\rightarrow$ Activity, authorID $\rightarrow$ User, postID $\rightarrow$ Post)
 
 commentID $\rightarrow$ authorID, postID
 
@@ -246,10 +248,12 @@ eventID $\rightarrow$ name, description, occurenceDate, creatorID
 
 \textbf{EventParticipant}(\underline{participantID} $\rightarrow$ User, \underline{eventID} $\rightarrow$ Event)
 
+\pagebreak
+
 \section{Análise Forma Normal}
 
 De acordo com o modelo relacional apresentado, todas as relações respeitam a forma normal de Boyce-Codd e,  consequentemente, a 3ª forma normal com a exceção da Relação User. \par
-Em birthDate $\rightarrow$ age o elemento que se encontra do lado esquerdo da relação (birthDate) não é uma chave, constitundo deste modo uma violação à BCNF. No entanto, o lado direito da relação apenas é constituído por atributos primários fazendo com que respeite a 3ª forma normal, a qual exige que os atributos do lado esquerdo sejam chaves ou que o lado direito da relação seja apenas contituído por atributos primários. \par
+Em birthDate $\rightarrow$ age o elemento que se encontra do lado esquerdo da relação (birthDate) não é uma chave, constitundo deste modo uma violação à BCNF. No entanto, o lado direito da relação apenas é constituído por atributos primos fazendo com que respeite a 3ª forma normal, a qual exige que os atributos do lado esquerdo sejam chaves ou que o lado direito da relação seja apenas contituído por atributos primos. \par
 Uma possível solução para este problema seria decompor User do seguinte modo:
 
 \begin{itemize}
