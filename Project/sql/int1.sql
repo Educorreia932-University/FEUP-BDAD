@@ -1,0 +1,3 @@
+SELECT MAX(type) FROM 
+    SELECT COUNT(type = 1)
+        FROM Post NATURAL JOIN Reaction NATURAL JOIN User
