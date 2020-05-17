@@ -60,6 +60,9 @@ INSERT INTO Publisher('publisherID', 'name')
 INSERT INTO Publisher('publisherID', 'name')
 	VALUES(20, 'Johnson Group');
 
+INSERT INTO Publisher('publisherID', 'name')
+	VALUES(21, 'Touch Five');
+
 INSERT INTO User('userID', 'phoneNumber', 'gender', 'birthDate', 'age', 'address')
 	VALUES(1, '909370217', 'M', '1950-02-07', 70, '35821 Gabriel Mission\nShannonside, CT 21386');
 
@@ -120,6 +123,9 @@ INSERT INTO Page('pageID', 'website', 'adminID')
 INSERT INTO Page('pageID', 'website', 'adminID')
 	VALUES(20, 'http://www.collins-alvarado.com/home/', 8);
 
+INSERT INTO Page('pageID', 'website', 'adminID')
+	VALUES(21, 'http://www.aptiv.com/home/', 10);
+
 INSERT INTO "Group"('groupID', 'name', 'adminID')
 	VALUES(21, 'Check Skin But Region He Get President.', 10);
 
@@ -134,6 +140,9 @@ INSERT INTO "Group"('groupID', 'name', 'adminID')
 
 INSERT INTO "Group"('groupID', 'name', 'adminID')
 	VALUES(25, 'Something Process Bag.', 9);
+
+INSERT INTO "Group"('groupID', 'name', 'adminID')
+	VALUES(26, 'Touch Five', 10);
 
 INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
 	VALUES(26, 'herself', 'https://www.gilbert-webb.org/', 1847, '.mp3', 56);
