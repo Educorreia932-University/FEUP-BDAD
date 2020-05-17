@@ -1,3 +1,12 @@
-SELECT MAX(type) FROM 
-    SELECT COUNT(type = 1)
-        FROM Post NATURAL JOIN Reaction NATURAL JOIN User
+.mode	columns
+.headers	on
+.nullvalue	NULL
+
+SELECT postID, MAX(numberOfLikes) FROM
+    (SELECT postID, COUNT(type) AS numberOfLikes
+        FROM Post INNER JOIN Reaction 
+            ON Post.postID = Reaction.activityID
+                -- A reaction of type 1 corresponds to a like
+                WHERE type = 1  
+                    GROUP by postID)
+                
