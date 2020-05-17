@@ -379,6 +379,14 @@ INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(60,'Tra
 
 INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(61,'Soothes dry lips.','2020-05-16');
 
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(62,'I am loving it.','2020-05-16');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(63,'Just do it.','2020-05-15');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(64,'What else.','2020-05-01');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(65,'Else what.','2020-04-30');
+
 INSERT INTO Chat('chatID', 'name') VALUES(61,'Until recent low.');
 
 INSERT INTO Chat('chatID', 'name') VALUES(62,'Player form company.');
@@ -448,6 +456,14 @@ INSERT INTO Comment('commentID', 'authorID','postID') VALUES(59,4,55);
 INSERT INTO Comment('commentID', 'authorID','postID') VALUES(60,7,53);
 
 INSERT INTO Comment('commentID', 'authorID','postID') VALUES(61,7,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(62,7,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(63,7,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(64,7,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(65,7,53);
 
 INSERT INTO Reaction('activityID', 'userID','type') VALUES(46,9,2);
 
