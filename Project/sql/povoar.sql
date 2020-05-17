@@ -135,20 +135,20 @@ INSERT INTO "Group"('groupID', 'name', 'adminID')
 INSERT INTO "Group"('groupID', 'name', 'adminID')
 	VALUES(25, 'Something Process Bag.', 9);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(26, 'herself', 'https://www.gilbert-webb.org/', 1847, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(26, 'herself', 'https://www.gilbert-webb.org/', 1847, '.mp3', 56);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(27, 'heart', 'https://www.mullins-garcia.com/', 988, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(27, 'heart', 'https://www.mullins-garcia.com/', 988, '.mp3', 260);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(28, 'Mrs', 'http://taylor-parsons.com/', 3601, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(28, 'Mrs', 'http://taylor-parsons.com/', 3601, '.mp3', 156);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(29, 'movie', 'https://www.lam-pratt.com/', 995, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(29, 'movie', 'https://www.lam-pratt.com/', 995, '.mp3', 9);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(30, 'happen', 'https://www.huff.com/', 1003, '.mp3');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(30, 'happen', 'https://www.huff.com/', 1003, '.mp3', 125);
 
 INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
 	VALUES(31, 'word', 'https://www.dorsey.com/', 3036, '.jpg');
@@ -165,65 +165,20 @@ INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
 INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
 	VALUES(35, 'whose', 'http://soto.com/', 553, '.jpg');
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(36, 'style', 'https://www.maddox-lloyd.com/', 258, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(36, 'style', 'https://www.maddox-lloyd.com/', 258, '.mp4', 157);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(37, 'finish', 'https://rangel.com/', 3633, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(37, 'finish', 'https://rangel.com/', 3633, '.mp4', 132);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(38, 'large', 'http://oconnor.com/', 421, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(38, 'large', 'http://oconnor.com/', 421, '.mp4', 239);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(39, 'media', 'http://www.jones.com/', 610, '.mp4');
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(39, 'media', 'http://www.jones.com/', 610, '.mp4', 47);
 
-INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format')
-	VALUES(40, 'either', 'http://www.fletcher.biz/', 4, '.mp4');
-
-INSERT INTO Audio('audioID', 'length')
-	VALUES(26, 56);
-
-INSERT INTO Audio('audioID', 'length')
-	VALUES(27, 260);
-
-INSERT INTO Audio('audioID', 'length')
-	VALUES(28, 156);
-
-INSERT INTO Audio('audioID', 'length')
-	VALUES(29, 9);
-
-INSERT INTO Audio('audioID', 'length')
-	VALUES(30, 125);
-
-INSERT INTO Image('imageID')
-	VALUES(31);
-
-INSERT INTO Image('imageID')
-	VALUES(32);
-
-INSERT INTO Image('imageID')
-	VALUES(33);
-
-INSERT INTO Image('imageID')
-	VALUES(34);
-
-INSERT INTO Image('imageID')
-	VALUES(35);
-
-INSERT INTO Video('videoID', 'length')
-	VALUES(36, 157);
-
-INSERT INTO Video('videoID', 'length')
-	VALUES(37, 132);
-
-INSERT INTO Video('videoID', 'length')
-	VALUES(38, 239);
-
-INSERT INTO Video('videoID', 'length')
-	VALUES(39, 47);
-
-INSERT INTO Video('videoID', 'length')
-	VALUES(40, 128);
+INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length')
+	VALUES(40, 'either', 'http://www.fletcher.biz/', 4, '.mp4', 128);
 
 INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
 	VALUES(41, 'Life College Teacher Thought.', 'House staff development light woman. Drop early opportunity little your.\nUnder ok star management again. Style sing majority find food affect wait specific.', '2021-04-10 22:34:13', 3);
