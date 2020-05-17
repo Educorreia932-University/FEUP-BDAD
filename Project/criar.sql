@@ -7,7 +7,8 @@ CREATE TABLE Publisher (
 
 DROP TABLE IF EXISTS User;
 CREATE TABLE User (
-    userID INTEGER REFERENCES Publisher(publisherID),
+    userID INTEGER REFERENCES Publisher(publisherID) ON DELETE SET NULL
+                                                     ON UPDATE CASCADE,
     phoneNumber INTEGER UNIQUE,
     gender CHAR CHECK(gender = 'M' or gender = 'F'), 
     birthDate TEXT NOT NULL CHECK(julianday(birthDate) - julianday('now') > julianday('13-01-01')),
@@ -18,8 +19,10 @@ CREATE TABLE User (
 
 DROP TABLE IF EXISTS Friendship;
 CREATE TABLE Friendship (
-    senderID INTEGER REFERENCES User(userID),
-    receiverID INTEGER REFERENCES User(userID),
+    senderID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                             ON UPDATE CASCADE,
+    receiverID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                               ON UPDATE CASCADE,
     state INTEGER CHECK(state >= 1 and state <= 3), 
     date TEXT NOT NULL CHECK(julianday(date) <= julianday('now')),
     PRIMARY KEY (senderID, receiverID)
@@ -27,16 +30,20 @@ CREATE TABLE Friendship (
 
 DROP TABLE IF EXISTS Page;
 CREATE TABLE Page (
-    pageID INTEGER REFERENCES Publisher(publisherID),
+    pageID INTEGER REFERENCES Publisher(publisherID) ON DELETE SET NULL
+                                                     ON UPDATE CASCADE,
     website TEXT,
-    adminID INTEGER REFERENCES User(userID),
+    adminID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                            ON UPDATE CASCADE,
     PRIMARY KEY (pageID)
 );
 
 DROP TABLE IF EXISTS PageFollower;
 CREATE TABLE PageFollower (
-    followerID INTEGER REFERENCES User(userID),
-    pageID INTEGER REFERENCES Page(pageID),   
+    followerID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                               ON UPDATE CASCADE,
+    pageID INTEGER REFERENCES Page(pageID) ON DELETE SET NULL
+                                           ON UPDATE CASCADE,   
     PRIMARY KEY (followerID, pageID)
 );
 
@@ -44,14 +51,17 @@ DROP TABLE IF EXISTS "Group";
 CREATE TABLE "Group" (
     groupID INTEGER,
     name TEXT NOT NULL,
-    adminID INTEGER REFERENCES User(userID),
+    adminID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                            ON UPDATE CASCADE,
     PRIMARY KEY (groupID)
 );
 
 DROP TABLE IF EXISTS GroupMember;
 CREATE TABLE GroupMember (
-    memberID INTEGER REFERENCES User(userID),
-    groupID INTEGER REFERENCES "Group"(groupID),
+    memberID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                             ON UPDATE CASCADE,
+    groupID INTEGER REFERENCES "Group"(groupID) ON DELETE SET NULL
+                                                ON UPDATE CASCADE,
     PRIMARY KEY (memberID, groupID)
 );
 
@@ -64,8 +74,10 @@ CREATE TABLE Chat (
 
 DROP TABLE IF EXISTS ChatParticipant;
 CREATE TABLE ChatParticipant (
-    participantID INTEGER REFERENCES User(userID),
-    chatID INTEGER REFERENCES Chat(chatID),
+    participantID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                                  ON UPDATE CASCADE,
+    chatID INTEGER REFERENCES Chat(chatID) ON DELETE SET NULL
+                                           ON UPDATE CASCADE,
     nickname TEXT,
     PRIMARY KEY (participantID, chatID)
 );
@@ -82,20 +94,23 @@ CREATE TABLE Multimedia (
 
 DROP TABLE IF EXISTS Audio;
 CREATE TABLE Audio (
-    audioID INTEGER REFERENCES Multimedia(multimediaID),
+    audioID INTEGER REFERENCES Multimedia(multimediaID) ON DELETE SET NULL
+                                                        ON UPDATE CASCADE,
     length INTEGER NOT NULL CHECK(length > 0),
     PRIMARY KEY (audioID)
 );
 
 DROP TABLE IF EXISTS Image;
 CREATE TABLE Image (
-    imageID INTEGER REFERENCES Multimedia(multimediaID),
+    imageID INTEGER REFERENCES Multimedia(multimediaID) ON DELETE SET NULL
+                                                        ON UPDATE CASCADE,
     PRIMARY KEY (imageID)
 );
 
 DROP TABLE IF EXISTS Video;
 CREATE TABLE Video (
-    videoID INTEGER REFERENCES Multimedia(multimediaID),
+    videoID INTEGER REFERENCES Multimedia(multimediaID) ON DELETE SET NULL
+                                                        ON UPDATE CASCADE,
     length INTEGER NOT NULL CHECK(length > 0),
     PRIMARY KEY (videoID)
 );
@@ -110,36 +125,50 @@ CREATE TABLE Activity (
 
 DROP TABLE IF EXISTS Message;
 CREATE TABLE Message (
-    messageID INTEGER REFERENCES Activity(activityID),
+    messageID INTEGER REFERENCES Activity(activityID) ON DELETE SET NULL
+                                                      ON UPDATE CASCADE,
     dateSent TEXT NOT NULL,
-    multimediaID INTEGER REFERENCES Multimedia(multimediaID),
-    authorID INTEGER REFERENCES User(userID),
-    chatID INTEGER REFERENCES Chat(chatID),
+    multimediaID INTEGER REFERENCES Multimedia(multimediaID) ON DELETE SET NULL
+                                                             ON UPDATE CASCADE,
+    authorID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                             ON UPDATE CASCADE,
+    chatID INTEGER REFERENCES Chat(chatID) ON DELETE SET NULL
+                                           ON UPDATE CASCADE,
     PRIMARY KEY (messageID)
 );
 
 DROP TABLE IF EXISTS Post;
 CREATE TABLE Post (
-    postID INTEGER REFERENCES Activity(activityID),
-    publisherID INTEGER REFERENCES Publisher(publisherID),
-    multimediaID INTEGER REFERENCES Multimedia(multimediaID),
-    pageID INTEGER REFERENCES Page(pageID) CHECK (groupID = NULL),
-    groupID INTEGER REFERENCES "Group"(groupID) CHECK (pageID = NULL),
+    postID INTEGER REFERENCES Activity(activityID) ON DELETE SET NULL
+                                                   ON UPDATE CASCADE,
+    publisherID INTEGER REFERENCES Publisher(publisherID) ON DELETE SET NULL
+                                                          ON UPDATE CASCADE,
+    multimediaID INTEGER REFERENCES Multimedia(multimediaID) ON DELETE SET NULL
+                                                             ON UPDATE CASCADE,
+    pageID INTEGER REFERENCES Page(pageID) ON DELETE SET NULL
+                                           ON UPDATE CASCADE,
+    groupID INTEGER REFERENCES "Group"(groupID) ON DELETE SET NULL
+                                                ON UPDATE CASCADE,
     PRIMARY KEY (postID)
 );
 
 DROP TABLE IF EXISTS Comment;
 CREATE TABLE Comment (
-    commentID INTEGER REFERENCES Activity(activityID),
-    authorID INTEGER REFERENCES User(userID),
-    postID INTEGER REFERENCES Post(postID),
+    commentID INTEGER REFERENCES Activity(activityID) ON DELETE SET NULL
+                                                      ON UPDATE CASCADE,
+    authorID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                             ON UPDATE CASCADE,
+    postID INTEGER REFERENCES Post(postID) ON DELETE SET NULL
+                                           ON UPDATE CASCADE,
     PRIMARY KEY (commentID)
 );
 
 DROP TABLE IF EXISTS Reaction;
 CREATE TABLE Reaction (
-    activityID INTEGER REFERENCES Activity(activityID),
-    userID INTEGER REFERENCES User(userID),
+    activityID INTEGER REFERENCES Activity(activityID) ON DELETE SET NULL
+                                                       ON UPDATE CASCADE,
+    userID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                           ON UPDATE CASCADE,
     type INTEGER CHECK(type >= 1 and type <=6),
     PRIMARY KEY (activityID, userID)
 );
@@ -150,13 +179,16 @@ CREATE TABLE Event (
     name TEXT NOT NULL,
     description TEXT NOT NULL,
     occurrenceDate TEXT NOT NULL CHECK(julianday(occurrenceDate) > julianday('now')),
-    creatorID INTEGER REFERENCES User(userID),
+    creatorID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                              ON UPDATE CASCADE,
     PRIMARY KEY (eventID)
 );
 
 DROP TABLE IF EXISTS EventParticipant;
 CREATE TABLE EventParticipant (
-    participantID INTEGER REFERENCES User(userID),
-    eventID INTEGER REFERENCES Event(eventID),
+    participantID INTEGER REFERENCES User(userID) ON DELETE SET NULL
+                                                  ON UPDATE CASCADE,
+    eventID INTEGER REFERENCES Event(eventID) ON DELETE SET NULL
+                                              ON UPDATE CASCADE,
     PRIMARY KEY (participantID, eventID)
 );
