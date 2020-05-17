@@ -181,7 +181,7 @@ INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length
 	VALUES(40, 'either', 'http://www.fletcher.biz/', 4, '.mp4', 128);
 
 INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
-	VALUES(41, 'Life College Teacher Thought.', 'House staff development light woman. Drop early opportunity little your.\nUnder ok star management again. Style sing majority find food affect wait specific.', '2021-04-10 22:34:13', 3);
+	VALUES(41, 'Life College Teacher Thought.', 'House staff development light woman. Drop early opportunity little your.\nUnder ok star management again. Style sing majority find food affect wait specific.', '2020-05-30 22:34:13', 3);
 
 INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
 	VALUES(42, 'Economy Thousand Cost Kid Person Brother.', 'Rest way information down large imagine executive. Risk follow unit pick. Strategy look class value try.\nEither store develop. Including several suggest hand your.', '2021-04-18 00:50:53', 7);
@@ -377,6 +377,8 @@ INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(59,'Sti
 
 INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(60,'Training politics public.','2009-04-01');
 
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(61,'Soothes dry lips.','2020-05-16');
+
 INSERT INTO Chat('chatID', 'name') VALUES(61,'Until recent low.');
 
 INSERT INTO Chat('chatID', 'name') VALUES(62,'Player form company.');
@@ -444,6 +446,8 @@ INSERT INTO Comment('commentID', 'authorID','postID') VALUES(58,4,52);
 INSERT INTO Comment('commentID', 'authorID','postID') VALUES(59,4,55);
 
 INSERT INTO Comment('commentID', 'authorID','postID') VALUES(60,7,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(61,7,53);
 
 INSERT INTO Reaction('activityID', 'userID','type') VALUES(46,9,2);
 
