@@ -89,30 +89,8 @@ CREATE TABLE Multimedia (
     uri TEXT,
     size REAL CHECK(size > 0),
     format TEXT CHECK(format='.mp3' or format='.jpg' or format='.png' or format='.wav' or format='.mp4'),
+    length INTEGER CHECK((format<>'.jpg' or format<>'.png') and length > 0),
     PRIMARY KEY (multimediaID)
-);
-
-DROP TABLE IF EXISTS Audio;
-CREATE TABLE Audio (
-    audioID INTEGER REFERENCES Multimedia(multimediaID) ON DELETE SET NULL
-                                                        ON UPDATE CASCADE,
-    length INTEGER NOT NULL CHECK(length > 0),
-    PRIMARY KEY (audioID)
-);
-
-DROP TABLE IF EXISTS Image;
-CREATE TABLE Image (
-    imageID INTEGER REFERENCES Multimedia(multimediaID) ON DELETE SET NULL
-                                                        ON UPDATE CASCADE,
-    PRIMARY KEY (imageID)
-);
-
-DROP TABLE IF EXISTS Video;
-CREATE TABLE Video (
-    videoID INTEGER REFERENCES Multimedia(multimediaID) ON DELETE SET NULL
-                                                        ON UPDATE CASCADE,
-    length INTEGER NOT NULL CHECK(length > 0),
-    PRIMARY KEY (videoID)
 );
 
 DROP TABLE IF EXISTS Activity;

@@ -298,7 +298,7 @@ Quanto às restantes relações, uma vez que do lado esquerdo das dependências 
 
 \begin{itemize}
     \item (\textit{senderID}, \textit{receiverID}) é a primary key (key restriction, PRIMARY KEY), é foreign key (referential integrity, FOREIGN KEY) e têm que ser distintos;
-    \item \textit{date} corresponde à data do envio do pedido de amizade CHECK(julianday(date) <= julianday('now')), tem de ser anterior ao momento atual e não pode ter valor nulo (NOT NULL);
+    \item \textit{date} corresponde à data do envio do pedido de amizade CHECK(julianday(date) $\leq$ julianday('now')), tem de ser anterior ao momento atual e não pode ter valor nulo (NOT NULL);
     \item \textit{state} corresponde ao estado atual do pedido de amizade e apenas pode possuir os valores 1 (aceite), 2 (pendente) e 3 (rejeitada) (CHECK).
 \end{itemize}
 
@@ -371,7 +371,7 @@ Quanto às restantes relações, uma vez que do lado esquerdo das dependências 
 \begin{itemize}
     \item \textit{activityID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY);
     \item \textit{userID} é foreign key (referential integrity, FOREIGN KEY);
-    \item \textit{type} representa as formas que a reação pode tomar e pode ter os seguinter valores: […] (CHECK).
+    \item \textit{type} representa as formas que a reação pode tomar e pode ter os seguinter valores: 1, 2, 3, 4, 5, 6 (CHECK).
 \end{itemize}
 
 \section{Comment}
