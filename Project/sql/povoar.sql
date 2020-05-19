@@ -234,9 +234,13 @@ INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(4,7,2,'19
 
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(4,10,3,'1991-01-04');
 
-INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(5,1,3,'2010-09-27');
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(5,1,1,'2017-02-13');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(5,6,1,'2017-02-13');
 
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(5,7,1,'1972-10-08');
+
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(5,9,1,'2017-02-13');
 
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(6,2,3,'1971-12-06');
 
