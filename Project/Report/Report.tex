@@ -7,7 +7,7 @@
 \graphicspath{ {./Images/} }
 
 \setlength{\parskip}{0.2em}
-\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\baselinestretch}{1.0}
 
 \begin{document}
 
@@ -410,5 +410,36 @@ Quanto às restantes relações, uma vez que do lado esquerdo das dependências 
     \item \textit{chatID} é primary key (key restriction, PRIMARY KEY);
     \item \textit{name} correponde ao nome da conversa e não pode ser nulo (NOT NULL).
 \end{itemize}
+
+\chapter{Interrogações}
+
+\section{Publicação com o maior número de likes  }
+
+\section{Reação mais comum por utilizador}
+
+\section{Duração média dos ficheiros de áudio/vídeo}
+
+\section{Número de mensagens trocadas por cada utilizador em conversas com mais de dois pairticipantes}
+
+\section{Recomendação de amigos}
+
+\section{Utilizadores que são administradores de uma página e de um grupo com o mesmo nome dessa página}
+
+\section{Número de comentários feitos por dia, no último mês antes de um evento, que se referem ao mesmo}
+
+\section{Utilizador que deram o maior número de likes às publicações de um outro}
+
+\section{Grau de separação entre cada par de utilizadores}
+
+\section{Maior "influenciador" da rede social}
+
+Esta interrogação permite obter uma estimativa do maior "influenciador" da nossa rede social. Para o cálculo desta estimativa realizou-se a média aritmética entre o número total de amigos do utilizador, a quantidade de eventos passados a que foi ou eventos futuros que planeia ir e o número de comentários de outros utilizadores feitos nas suas publicações.
+Deste modo, é obtido uma pontuação para cada utilizador que classifica o seu grau de influência. Quem possuir o maior \textit{score} será considerado o maior influenciador do FEUPBook.
+
+\begin{equation}
+    score = \frac{N_{amigos} + N_{eventos} + N_{comentarios}}{3}
+\end{equation}
+      
+\chapter{Gatilhos}
 
 \end{document}
