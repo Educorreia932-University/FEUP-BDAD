@@ -3,11 +3,8 @@
 .headers    on
 .nullvalue    NULL
 
-SELECT type, num AS number_of_reactions FROM
-    (SELECT COUNT(*) AS num, type 
-        FROM Reaction 
-            GROUP BY type)
-                WHERE num LIKE (SELECT MAX(num) FROM 
-                    (SELECT COUNT(*) AS num, type 
-                        FROM Reaction 
-                            GROUP BY type));
+SELECT userID, reactionType, MAX(reactionCount) AS reactionCount FROM
+    (SELECT userID, type as reactionType, COUNT(type) AS reactionCount
+        FROM User INNER JOIN Reaction USING(userID)
+            GROUP BY userID, type)
+    GROUP BY userID;

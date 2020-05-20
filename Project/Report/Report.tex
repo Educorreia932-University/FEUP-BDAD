@@ -2,6 +2,7 @@
 \usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{amsmath}
 \usepackage[a4paper, total={7in, 10in}]{geometry}
 
 \graphicspath{ {./Images/} }
@@ -371,7 +372,7 @@ Quanto às restantes relações, uma vez que do lado esquerdo das dependências 
 \begin{itemize}
     \item \textit{activityID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY);
     \item \textit{userID} é foreign key (referential integrity, FOREIGN KEY);
-    \item \textit{type} representa as formas que a reação pode tomar e pode ter os seguinter valores: 1, 2, 3, 4, 5, 6 (CHECK).
+    \item \textit{type} representa as formas que a reação pode tomar e pode ter os valores 1, 2, 3, 4, 5 ou 6, correspondentes às reações da figura da secção 2.5 por ordem (CHECK).
 \end{itemize}
 
 \section{Comment}
@@ -413,13 +414,22 @@ Quanto às restantes relações, uma vez que do lado esquerdo das dependências 
 
 \chapter{Interrogações}
 
-\section{Publicação com o maior número de likes  }
+\section{Publicação com o maior número de likes}
+
+Esta interrogação permite obter a publicação mais popular da rede social, ou seja, a que recebeu o maior número de gostos. 
 
 \section{Reação mais comum por utilizador}
 
+Esta interrogação permite obter a reação mais comum de cada utilizador de modo a traçar o seu perfil. \par
+Por exemplo, um utilizador que reage muitas vezes com o \textit{smile} de riso será mais "brincalhão", enquanto que um que faça muitas reações com a carinha triste será mais "depressivo".
+
 \section{Duração média dos ficheiros de áudio/vídeo}
 
-\section{Número de mensagens trocadas por cada utilizador em conversas com mais de dois pairticipantes}
+\section{Número de mensagens trocadas por cada utilizador em conversas com mais de dois participantes}
+
+Em conversas de grupo com 3 ou mais utilizadores, haverão sempre utilizadores mais ativos do que outros. \par
+Alguns serão os autores da maioria das mensagens da conversa, enquanto que outros apenas lerão essas mensagens e raramente irão participar com as suas mensagens. \par
+Assim sendo, é possível obter os dados necessários para um estudo estatístico em que se analisaria a participação de cada utilizador, numa conversa de grupo, através desta Interrogação.
 
 \section{Recomendação de amigos}
 
@@ -429,16 +439,16 @@ Quanto às restantes relações, uma vez que do lado esquerdo das dependências 
 
 \section{Utilizador que deram o maior número de likes às publicações de um outro}
 
-\section{Grau de separação entre cada par de utilizadores}
-
 \section{Maior "influenciador" da rede social}
 
 Esta interrogação permite obter uma estimativa do maior "influenciador" da nossa rede social. Para o cálculo desta estimativa realizou-se a média aritmética entre o número total de amigos do utilizador, a quantidade de eventos passados a que foi ou eventos futuros que planeia ir e o número de comentários de outros utilizadores feitos nas suas publicações.
 Deste modo, é obtido uma pontuação para cada utilizador que classifica o seu grau de influência. Quem possuir o maior \textit{score} será considerado o maior influenciador do FEUPBook.
 
-\begin{equation}
+\begin{equation*}
     score = \frac{N_{amigos} + N_{eventos} + N_{comentarios}}{3}
-\end{equation}
+\end{equation*}
+
+\section{Grau de separação entre cada par de utilizadores}
       
 \chapter{Gatilhos}
 
