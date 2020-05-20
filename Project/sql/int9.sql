@@ -1,6 +1,9 @@
-.mode columns.headers on.nullvalue NULL
+.mode columns
+.headers on
+.nullvalue NULL
+
 SELECT
-  *
+  ID,((IFNULL(friendCount,0) + IFNULL(eventCount,0) + IFNULL(commentCount,0))/3.0) AS influencerScore
 FROM (
     (
       (
@@ -75,4 +78,4 @@ FROM (
         GROUP BY
           userID
       ) USING(ID) -- Number of comments in posts
-  );
+  ) ORDER BY influencerScore DESC;
