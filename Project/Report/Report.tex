@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage{tkz-graph}
 \usepackage[a4paper, total={7in, 10in}]{geometry}
 
 \graphicspath{ {./Images/} }
@@ -437,7 +438,9 @@ Assim sendo, é possível obter os dados necessários para um estudo estatístic
 
 \section{Número de comentários feitos por dia, no último mês antes de um evento, que se referem ao mesmo}
 
-\section{Utilizador que deram o maior número de likes às publicações de um outro}
+\section{Utilizador que deram o maior número de \textit{likes} às publicações de um outro}
+
+Amigos chegados normalmente irão dar gosto na publicações um do outro. Deste modo, seria possível tentar prever quem seria o amigo mais próximo de um utilizador ao analisar quem foi aquele que deixou o maior número total de \textit{likes} nas suas publicações, residindo aí o intuito desta interrogação.
 
 \section{Maior "influenciador" da rede social}
 
@@ -450,6 +453,39 @@ Deste modo, é obtido uma pontuação para cada utilizador que classifica o seu 
 
 \section{Grau de separação entre cada par de utilizadores}
       
+\begin{tikzpicture}
+	\SetGraphUnit{5}
+
+	\Vertex{1}
+
+	\EA(1){2}
+	\EA(2){3}
+	\EA(3){4}
+	
+	\SO(1){5}
+	\SO(2){6}
+	\SO(3){7}
+	\SO(4){8}
+	\SO(6){9}
+	\SO(7){10}
+
+	\path [-] (1) edge[bend left=20] (4);
+	\path [-] (1) edge[bend right=10] (5);
+	\path [-] (1) edge[bend left=10] (9);
+
+	\path [-] (2) edge[bend right=10] (5);
+	
+	\path [-] (3) edge[bend right=10] (6);
+
+	\path [-] (4) edge[bend right=10] (10);
+
+	\path [-] (5) edge[bend left=10] (6);
+	\path [-] (5) edge[bend right=15] (7);
+	\path [-] (5) edge[bend right=10] (9);
+
+	\path [-] (6) edge[bend left=15] (8);
+\end{tikzpicture}
+
 \chapter{Gatilhos}
 
 \end{document}
