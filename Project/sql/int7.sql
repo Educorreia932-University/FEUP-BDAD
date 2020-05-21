@@ -23,7 +23,7 @@ SELECT day, IFNULL(numberOfComments, 0) as numberOfComments FROM (
     -- Number of comments per day
     (SELECT activityDate as day, COUNT(commentID) AS numberOfComments 
         FROM (Comment INNER JOIN Activity ON Comment.commentID = Activity.activityID)
-            WHERE julianday(activityDate) >=
+            WHERE activityText LIKE "%Tokyo Olympics%" AND julianday(activityDate) >=
                 (SELECT julianday(occurrenceDate) 
                     FROM (SELECT occurrenceDate
                         FROM Event WHERE eventID = 41)) - 30 

@@ -410,7 +410,7 @@ INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(69,'Tok
 
 INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(70,'Tokyo Olympics','2020-05-07');
 
-INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(71,'Tokyo Olympics','2020-05-06');
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(71,'I just can not wait for the Tokyo Olympics!','2020-05-06');
 
 INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(72,'Tokyo Olympics','2020-05-08');
 
