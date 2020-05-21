@@ -8,4 +8,4 @@ WHEN
 BEGIN
     --SELECT RAISE(ABORT, 'Novo adminstrador não pertence ao grupo!');
     INSERT INTO GroupMember VALUES (New.adminID, New.groupID);
-END
+END;
