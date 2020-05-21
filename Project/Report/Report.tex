@@ -424,7 +424,7 @@ Esta interrogação permite obter a publicação mais popular da rede social, ou
 Esta interrogação permite obter a reação mais comum de cada utilizador de modo a traçar o seu perfil. \par
 Por exemplo, um utilizador que reage muitas vezes com o \textit{smile} de riso será mais "brincalhão", enquanto que um que faça muitas reações com a carinha triste será mais "depressivo".
 
-\section{Duração média dos ficheiros de áudio/vídeo}
+\section{Frequência média dos ficheiros de áudio/vídeo}
 
 \section{Número de mensagens trocadas por cada utilizador em conversas com mais de dois participantes}
 
@@ -436,15 +436,26 @@ Assim sendo, é possível obter os dados necessários para um estudo estatístic
 
 \section{Utilizadores que são administradores de uma página e de um grupo com o mesmo nome dessa página}
 
+% Em princípio, grandes páginas terão um grupo associado à mesma 
+
 \section{Número de comentários feitos por dia, no último mês antes de um evento, que se referem ao mesmo}
+
+Com o aproximar de um evento importante (como por exemplo, as Olimpíadas ou o Campenato Europeu de Futebol), deverá haver um aumento progressivo do número de comentários referentes a esse mesmo evento. \par
+
+Com esta interrogação, obtém-se os dados necessários para representar graficamente o número de comentários ao longo do tempo para posteriormente realizar algum tipo de análise estatística.
 
 \section{Utilizador que deram o maior número de \textit{likes} às publicações de um outro}
 
-Amigos chegados normalmente irão dar gosto na publicações um do outro. Deste modo, seria possível tentar prever quem seria o amigo mais próximo de um utilizador ao analisar quem foi aquele que deixou o maior número total de \textit{likes} nas suas publicações, residindo aí o intuito desta interrogação.
+Amigos chegados normalmente irão dar gosto na publicações um do outro. \par
+
+Deste modo, seria possível tentar prever quem seria o amigo mais próximo de um utilizador ao analisar quem foi aquele que deixou o maior número total de \textit{likes} nas suas publicações, residindo aí o intuito desta interrogação.
 
 \section{Maior "influenciador" da rede social}
 
-Esta interrogação permite obter uma estimativa do maior "influenciador" da nossa rede social. Para o cálculo desta estimativa realizou-se a média aritmética entre o número total de amigos do utilizador, a quantidade de eventos passados a que foi ou eventos futuros que planeia ir e o número de comentários de outros utilizadores feitos nas suas publicações.
+Esta interrogação permite obter uma estimativa do maior "influenciador" da nossa rede social. \par
+
+Para o cálculo desta estimativa realizou-se a média aritmética entre o número total de amigos do utilizador, a quantidade de eventos passados a que foi ou eventos futuros que planeia ir e o número de comentários de outros utilizadores feitos nas suas publicações. \par 
+
 Deste modo, é obtido uma pontuação para cada utilizador que classifica o seu grau de influência. Quem possuir o maior \textit{score} será considerado o maior influenciador do FEUPBook.
 
 \begin{equation*}
@@ -452,9 +463,14 @@ Deste modo, é obtido uma pontuação para cada utilizador que classifica o seu 
 \end{equation*}
 
 \section{Grau de separação entre cada par de utilizadores}
-      
+    
+Existe uma teoria, denominada de teoria dos seis graus de separação, que afirma que são necessários no máximo seis laços de amizade para que duas pessoas quaisquer estejam ligadas. \par
+
+Como tal, realizámos esse estudo na nossa rede social e calculámos a quantos amigos uma pessoa estava da outra (gau de separação) para cada utilizador da rede social através desta interrogação.
+
+\centering
 \begin{tikzpicture}
-	\SetGraphUnit{5}
+	\SetGraphUnit{3}
 
 	\Vertex{1}
 
