@@ -97,7 +97,7 @@ DROP TABLE IF EXISTS Activity;
 CREATE TABLE Activity (
     activityID INTEGER,
     activityText TEXT,
-    activityDate TEXT CHECK(julianday(activityDate) <= julianday('now')),
+    activityDate TEXT, --CHECK(julianday(activityDate) <= julianday('now')),
     PRIMARY KEY (activityID)
 );
 

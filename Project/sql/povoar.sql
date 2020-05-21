@@ -190,7 +190,7 @@ INSERT INTO Multimedia('multimediaID', 'title', 'uri', 'size', 'format', 'length
 	VALUES(40, 'either', 'http://www.fletcher.biz/', 4, '.mp4', 128);
 
 INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
-	VALUES(41, 'Life College Teacher Thought.', 'House staff development light woman. Drop early opportunity little your.\nUnder ok star management again. Style sing majority find food affect wait specific.', '2020-05-30 22:34:13', 3);
+	VALUES(41, 'Tokyo Olympics', 'House staff development light woman. Drop early opportunity little your.\nUnder ok star management again. Style sing majority find food affect wait specific.', '2020-05-30 22:34:13', 3);
 
 INSERT INTO Event('eventID', 'name', 'description', 'occurrenceDate', 'creatorID')
 	VALUES(42, 'Economy Thousand Cost Kid Person Brother.', 'Rest way information down large imagine executive. Risk follow unit pick. Strategy look class value try.\nEither store develop. Including several suggest hand your.', '2021-04-18 00:50:53', 7);
@@ -398,7 +398,27 @@ INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(63,'Jus
 
 INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(64,'What else.','2020-05-01');
 
-INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(65,'Else what.','2020-04-30');
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(65,'Tokyo Olympics','2020-05-28');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(66,'Tokyo Olympics','2020-05-25');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(67,'Tokyo Olympics','2020-05-10');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(68,'Tokyo Olympics','2020-05-09');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(69,'Tokyo Olympics','2020-05-08');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(70,'Tokyo Olympics','2020-05-07');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(71,'Tokyo Olympics','2020-05-06');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(72,'Tokyo Olympics','2020-05-08');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(73,'Tokyo Olympics','2020-05-07');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(74,'Tokyo Olympics','2020-05-06');
+
+INSERT INTO Activity('activityID', 'activityText','activityDate') VALUES(75,'Tokyo Olympics','2020-05-06');
 
 INSERT INTO Chat('chatID', 'name') VALUES(61,'Until recent low.');
 
@@ -470,13 +490,33 @@ INSERT INTO Comment('commentID', 'authorID','postID') VALUES(60,7,53);
 
 INSERT INTO Comment('commentID', 'authorID','postID') VALUES(61,7,53);
 
-INSERT INTO Comment('commentID', 'authorID','postID') VALUES(62,7,53);
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(62,1,53);
 
-INSERT INTO Comment('commentID', 'authorID','postID') VALUES(63,7,53);
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(63,2,53);
 
-INSERT INTO Comment('commentID', 'authorID','postID') VALUES(64,7,53);
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(64,3,53);
 
-INSERT INTO Comment('commentID', 'authorID','postID') VALUES(65,7,53);
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(65,4,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(66,5,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(67,6,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(68,7,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(69,1,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(70,2,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(71,3,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(72,4,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(73,5,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(74,6,53);
+
+INSERT INTO Comment('commentID', 'authorID','postID') VALUES(75,7,53);
 
 INSERT INTO Reaction('activityID', 'userID','type') VALUES(46,9,2);
 
