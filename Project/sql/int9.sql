@@ -3,7 +3,7 @@
 .nullvalue NULL
 
 SELECT ID, ((IFNULL(friendCount, 0) + IFNULL(eventCount, 0) + IFNULL(commentCount,0)) / 3.0) AS influencerScore FROM (
-		-- Used to get amount of friends from all user
+		-- Used to get amount of friends from all users
 			-- We have to do a FULL OUTER JOIN to get the total amount of friends of a user
 			-- However, SQLite doesn't support this operator (nor it does support RIGHT JOIN)
 			-- So, to simulate it, we perform two LEFT JOINs with the table order reversed the second time (RIGHT JOIN) and then a UNION between them
@@ -29,7 +29,7 @@ SELECT ID, ((IFNULL(friendCount, 0) + IFNULL(eventCount, 0) + IFNULL(commentCoun
 		) 
 	
 	LEFT JOIN (
-		-- Used to get amount of events that the user already went or planes to go
+		-- Used to get amount of events that the user already went or plans to go
 		SELECT participantID as ID, count(eventID) AS eventCount 
 			FROM EventParticipant
 				GROUP BY ID
