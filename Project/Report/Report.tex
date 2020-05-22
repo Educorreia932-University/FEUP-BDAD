@@ -393,7 +393,11 @@ Esta interrogação permite obter a reação mais comum de cada utilizador de mo
 
 Por exemplo, um utilizador que reage muitas vezes com o \textit{smile} de riso será mais "brincalhão", enquanto que um que faça muitas reações com a carinha triste será mais "melancólico".
 
-\section{Frequência média dos ficheiros de áudio/vídeo}
+\section{Média do tamanho dos ficheiros multimédia enviados por hora}
+
+Frequentemente os utilizadores da rede social trocaram mensagens com elementos multimédia entre si, quer seja para enviar fotos, vídeos, mensagens áudio... \par
+
+Logo, existirá um grande fluxo de dados e como tal, procurou-se calcular essa métrica atráves do rácio MBs / Hora.
 
 \section{Número de mensagens trocadas por cada utilizador em conversas com mais de dois participantes}
 
@@ -404,9 +408,17 @@ Assim sendo, é possível obter os dados necessários para um estudo estatístic
 
 \section{Recomendação de amigos}
 
+Numa rede social, os utilizadores desejarão manter os seus amigos por perto, no entanto, poderá ser complicado procurar por todos eles ou até mesmo verificar se já possuem ou não conta no FEUPBook. \par
+
+Para facilitar esse processo, é possível indicar para cada utilizador uma recomendação de amigo, ou seja, uma pessoa que é provável que ele conheça, mas que ainda não é amigo dela. \par
+
+Para se obter essa recomendação, verificou-se, para cada utilizador, qual era a pessoa que possuía o maior número de amigos em comum com os amigos desse utilizador, mas que não amigo dele.
+
 \section{Utilizadores que são administradores de uma página e de um grupo com o mesmo nome dessa página}
 
-% Em princípio, grandes páginas terão um grupo associado à mesma 
+Em princípio, grandes páginas terão um grupo associado à mesma, onde os utilizadores poderão falar sobre os assuntos relativos a esse entidade. \par
+
+Como tal, será de esperar que, por vezes, o administrador do grupo será o mesmo que criara a página e, como tal, será uma pessoa de relevância nesse meio, como por exemplo, o \textit{social media manager} de uma empresa importante que possui tanto uma página, como um grupo.
 
 \section{Número de comentários feitos por dia, no último mês antes de um evento, que se referem ao mesmo}
 
