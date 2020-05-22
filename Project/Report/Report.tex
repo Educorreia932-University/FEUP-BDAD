@@ -189,27 +189,11 @@ participantID, chatID $\rightarrow$ nickname
 
 \vspace{2mm}
 
-\textbf{Multimedia}(\underline{multimediaID}, title, uri, size, format)
+\textbf{Multimedia}(\underline{multimediaID}, title, uri, size, format, length)
 
-multimediaID $\rightarrow$ title, uri, size, format  
+multimediaID $\rightarrow$ title, uri, size, format, length
 
-uri $\rightarrow$ title, size, format
-
-\vspace{2mm}
-
-\textbf{Audio}(\underline{audioID} $\rightarrow$ Multimedia, length)
-
-audioID $\rightarrow$ length
-
-\vspace{2mm}
-
-\textbf{Image}(\underline{imageID} $\rightarrow$ Multimedia)
-
-\vspace{2mm}
-
-\textbf{Video}(\underline{videoID} $\rightarrow$ Multimedia, length)
-
-videoID $\rightarrow$ length
+uri $\rightarrow$ title, size, format, length
 
 \vspace{2mm}
 
@@ -347,25 +331,6 @@ Quanto às restantes relações, uma vez que do lado esquerdo das dependências 
     \item \textit{multimediaID} é primary key (key restriction, PRIMARY KEY);
     \item \textit{size} só pode tomar valores inteiros positivos (CHECK);
     \item \textit{type} pode tomar os seguintes valores: ".mp3", ".jpg", ".png", ".wav", ".mp4"... (CHECK).
-\end{itemize}
-
-\section{Audio}
-
-\begin{itemize}
-    \item \textit{audioID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY) e não pode ser igual a qualquer idImagem de Imagem e qualquer idVideo de Video;
-    \item \textit{length} só pode tomar valores inteiros positivos (CHECK).
-\end{itemize}
-
-\section{Image}
-
-\begin{itemize}
-    \item \textit{imageID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY) e não pode ser igual a qualquer idAudio de Audio e qualquer idVideo de Video.
-\end{itemize}
-
-\section{Video}
-
-\begin{itemize}
-    \item \textit{videoID} é primary key (key restriction, PRIMARY KEY) e foreign key (referential integrity, FOREIGN KEY) e não pode ser igual a qualquer idImagem de Imagem e qualquer idAudio de Audio;
     \item \textit{length} só pode tomar valores inteiros positivos (CHECK).
 \end{itemize}
 
@@ -418,18 +383,22 @@ Quanto às restantes relações, uma vez que do lado esquerdo das dependências 
 
 \section{Publicação com o maior número de likes}
 
-Esta interrogação permite obter a publicação mais popular da rede social, ou seja, a que recebeu o maior número de gostos. 
+Numa rede social, é comum o fenómeno de existirem publicações virais que arrecadam um número consideravelmente grande de gostos em pouco tempo e, portanto, rapidamente se tornam populares. \par
+
+Daí o propósito desta interrogação que permite obter a publicação mais popular da rede social, ou seja, a que recebeu o maior número de gostos. 
 
 \section{Reação mais comum por utilizador}
 
-Esta interrogação permite obter a reação mais comum de cada utilizador de modo a traçar o seu perfil. \par
-Por exemplo, um utilizador que reage muitas vezes com o \textit{smile} de riso será mais "brincalhão", enquanto que um que faça muitas reações com a carinha triste será mais "depressivo".
+Esta interrogação permite obter a reação mais comum de cada utilizador de modo a traçar o seu "perfil". \par
+
+Por exemplo, um utilizador que reage muitas vezes com o \textit{smile} de riso será mais "brincalhão", enquanto que um que faça muitas reações com a carinha triste será mais "melancólico".
 
 \section{Frequência média dos ficheiros de áudio/vídeo}
 
 \section{Número de mensagens trocadas por cada utilizador em conversas com mais de dois participantes}
 
 Em conversas de grupo com 3 ou mais utilizadores, haverão sempre utilizadores mais ativos do que outros. \par
+
 Alguns serão os autores da maioria das mensagens da conversa, enquanto que outros apenas lerão essas mensagens e raramente irão participar com as suas mensagens. \par
 Assim sendo, é possível obter os dados necessários para um estudo estatístico em que se analisaria a participação de cada utilizador, numa conversa de grupo, através desta Interrogação.
 

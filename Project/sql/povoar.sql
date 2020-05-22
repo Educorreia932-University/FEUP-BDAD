@@ -444,15 +444,15 @@ INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(7,63,'G
 
 INSERT INTO ChatParticipant('participantID', 'chatID','nickname') VALUES(8,63,'Issue month.');
 
-INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(46,'1994-02-20',30,1,61);
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(46,'2020-05-22 14:44',30,1,61);
 
-INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(47,'1986-05-27',37,4,62);
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(47,'2020-05-22 15:33',37,4,62);
 
-INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(48,'1977-04-25',34,5,62);
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(48,'2020-05-22 12:01',34,5,62);
 
-INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(49,'1986-10-19',38,7,63);
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(49,'2020-05-22 16:36',38,7,63);
 
-INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(50,'1973-05-26',31,8,63);
+INSERT INTO Message('messageID', 'dateSent','multimediaID','authorID','chatID') VALUES(50,'2020-05-22 15:25',31,8,63);
 
 INSERT INTO GroupMember('memberID', 'groupID') VALUES(10,21);
 
