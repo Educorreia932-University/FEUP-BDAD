@@ -2,6 +2,8 @@
 .headers    on
 .nullvalue    NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 SELECT authorID as Author, COUNT(*) as total_messages, name as chat_name 
     FROM Message NATURAL JOIN Chat AS c
     WHERE ((SELECT COUNT(*) FROM ChatParticipant NATURAL JOIN Chat

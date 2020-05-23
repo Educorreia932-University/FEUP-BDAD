@@ -2,6 +2,8 @@
 .headers on
 .nullvalue NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 -- Date of the Olympics event (that has an ID of value 41)
 CREATE VIEW IF NOT EXISTS finalDate AS
     SELECT occurrenceDate FROM Event WHERE eventID = 41;

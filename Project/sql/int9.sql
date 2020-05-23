@@ -2,6 +2,8 @@
 .headers on
 .nullvalue NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 SELECT ID, ((IFNULL(friendCount, 0) + IFNULL(eventCount, 0) + IFNULL(commentCount,0)) / 3.0) AS influencerScore FROM (
 		-- Used to get amount of friends from all users
 			-- We have to do a FULL OUTER JOIN to get the total amount of friends of a user

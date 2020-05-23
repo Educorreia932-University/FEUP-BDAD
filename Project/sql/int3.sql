@@ -2,6 +2,8 @@
 .headers	on
 .nullvalue	NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 DROP VIEW IF EXISTS m1;
 
 CREATE VIEW m1 As

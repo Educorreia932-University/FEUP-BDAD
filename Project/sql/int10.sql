@@ -2,6 +2,8 @@
 .headers on
 .nullvalue NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 -- Friends of each user
 CREATE VIEW IF NOT EXISTS friends AS
     SELECT * FROM (

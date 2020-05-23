@@ -2,6 +2,8 @@
 .headers on
 .nullvalue NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,7,1,'2000-03-04');
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(3,7,1,'2000-03-04');
 

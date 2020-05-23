@@ -2,6 +2,8 @@
 .headers	on
 .nullvalue	NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 SELECT postID, MAX(numberOfLikes) AS numberOfLikes FROM
     (SELECT postID, COUNT(type) AS numberOfLikes
         FROM Post INNER JOIN Reaction 
