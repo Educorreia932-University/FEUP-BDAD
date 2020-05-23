@@ -412,7 +412,7 @@ Numa rede social, os utilizadores desejarão manter os seus amigos por perto, no
 
 Para facilitar esse processo, é possível indicar para cada utilizador uma recomendação de amigo, ou seja, uma pessoa que é provável que ele conheça, mas que ainda não é amigo dela. \par
 
-Para se obter essa recomendação, verificou-se, para cada utilizador, qual era a pessoa que possuía o maior número de amigos em comum com os amigos desse utilizador, mas que não amigo dele.
+Para se obter essa recomendação, verificou-se, para cada utilizador, qual era a pessoa que possuía o maior número de amigos em comum com os amigos desse utilizador, mas que não era amigo dele.
 
 \section{Utilizadores que são administradores de uma página e de um grupo com o mesmo nome dessa página}
 
@@ -508,15 +508,16 @@ Como tal, realizámos esse estudo na nossa rede social e calculámos a quantos a
 
 \chapter{Gatilhos}
 
+\section{Limite de amigos}
+
+Este \textit{trigger} permite manter um número de amigos limitados na rede social, ou seja, quando há uma inserção na tabela Friendship se o utilizador já tiver o número máximo de amigos a inserção é parada.
+
+\section{Participação num evento}
+
+Este \textit{trigger} faz com que quando um utilizador pressiona um botão a dizer que vai ou foi a um certo evento(há uma inserção na tabela \textit{EventParticipant}) este faz um post no perfil do utilizador. O conteúdo deste post pode ser "I went to (\textit{event name})" se o evento já tiver acontecido e "I will participate in (\textit{event name})" se ainda for acontecer.
+
+\section{Novo administrador de um grupo}
+
+Este \textit{trigger} faz com que quando um utilizador é convidado para ser administrador de um grupo ao qual não pertence este é automaticamente adicionado e o administrador atual perde o cargo e passa a ser membro.
+
 \end{document}
-
-
-
-
-TRIGGERS
-
-1 -Este trigger permite manter um número de amigos limitados na rede social, ou seja, quando há uma inserção na tabela Friendship se o utilizador já tiver o número máximo de amigos a inserção é parada.
-
-2 - Este trigger faz com que quando um utilizador pressiona um botão a dizer que vai ou foi a um certo evento(há uma inserção na tabela EventParticipant) este faz um post no perfil do utilizador. O conteúdo deste post pode ser "I went to (event Name)" se o evento já tiver acontecido e "I will participate in (event name)" se ainda for acontecer.
-
-3 - Este trigger faz com que quando um utilizador é convidado para ser administrador de um grupo ao qual não pertence este é automaticamente adicionado e o administrador atual perde o cargo e passa a ser membro.
