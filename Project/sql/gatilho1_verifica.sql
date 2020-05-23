@@ -2,6 +2,8 @@
 .headers	on
 .nullvalue	NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 SELECT * FROM Friendship 
     WHERE (senderID IS 5 OR receiverID IS 5) AND STATE IS 1;
 
