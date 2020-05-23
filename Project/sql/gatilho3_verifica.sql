@@ -2,6 +2,8 @@
 .headers	on
 .nullvalue	NULL
 
+PRAGMA FOREIGN_KEYS = ON;
+
 SELECT * FROM "Group" JOIN GroupMember USING(groupID)
 ORDER BY groupID;
 
