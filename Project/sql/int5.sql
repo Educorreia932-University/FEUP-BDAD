@@ -4,9 +4,6 @@
 
 PRAGMA FOREIGN_KEYS = ON;
 
-INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,7,1,'2000-03-04');
-INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(3,7,1,'2000-03-04');
-
 -- Friends of each user
 CREATE VIEW IF NOT EXISTS friends AS
     SELECT * FROM (
@@ -32,6 +29,3 @@ FROM (SELECT *, source || target as conc
             AND f3.target IS NULL)
     GROUP BY conc
     HAVING COUNT(*) > 1);
-
-DELETE FROM Friendship WHERE senderID = 1 AND receiverID = 7 AND state = 1;
-DELETE FROM Friendship WHERE senderID = 3 AND receiverID = 7 AND state = 1;

@@ -210,6 +210,8 @@ INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,3,2,'20
 
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,4,2,'1971-07-02');
 
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,7,1,'2000-03-04');
+
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(1,10,2,'1972-02-25');
 
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(2,3,2,'1987-11-05');
@@ -250,7 +252,7 @@ INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(6,10,2,'1
 
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(7,1,2,'2014-09-09');
 
-INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(7,3,2,'1980-07-21');
+INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(7,3,1,'1980-07-21');
 
 INSERT INTO Friendship('senderID', 'receiverID','state','date') VALUES(7,4,3,'1994-03-24');
 
