@@ -1,0 +1,1 @@
+db.tweets.find({'entities.hashtags.text': 'javascript'}).count()

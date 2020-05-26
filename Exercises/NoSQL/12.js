@@ -1,0 +1,1 @@
+db.tweets.find({'entities.user_mentions': {$size: 3} }).count()

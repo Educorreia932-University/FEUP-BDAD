@@ -1,0 +1,1 @@
+db.tweets.find({'source':'web'}).count()

@@ -1,0 +1,1 @@
+db.tweets.aggregate([{ $sample: { size: 100 } }].sort({"user.friends_count": -1}))

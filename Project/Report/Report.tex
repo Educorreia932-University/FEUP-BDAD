@@ -412,7 +412,7 @@ Numa rede social, os utilizadores desejarão manter os seus amigos por perto, no
 
 Para facilitar esse processo, é possível indicar para cada utilizador uma recomendação de amigo, ou seja, uma pessoa que é provável que ele conheça, mas que ainda não é amigo dela. \par
 
-Para se obter essa recomendação, verificou-se, para cada utilizador, qual era a pessoa que possuía o maior número de amigos em comum com os amigos desse utilizador, mas que não era amigo dele.
+Para se obter essa recomendação, verificou-se, para cada utilizador, quais eram os amigos em comum dos amigos dele, que não eram seus amigos.
 
 \section{Utilizadores que são administradores de uma página e de um grupo com o mesmo nome dessa página}
 
@@ -503,6 +503,9 @@ Como tal, realizámos esse estudo na nossa rede social e calculámos a quantos a
         \path [-] (5) edge[bend right=10] (9);
 
         \path [-] (6) edge[bend left=15] (8);
+
+        \path [-] (7) edge[bend left=15] (1);
+        \path [-] (7) edge[bend left=15] (3);
     \end{tikzpicture}
 \end{figure}
 

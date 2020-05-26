@@ -1,0 +1,1 @@
+db.tweets.find({'entities.user_mentions': {$ne:[]} }).count()

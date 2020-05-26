@@ -1,0 +1,1 @@
+db.tweets.find({"user.followers_count": {"$gt": 100}}).count()

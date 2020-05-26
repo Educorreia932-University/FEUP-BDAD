@@ -1,0 +1,1 @@
+db.tweets.distinct('user.time_zone')

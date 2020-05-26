@@ -1,0 +1,1 @@
+db.tweets.find({'text': {'$regex': 'Cristiano Ronaldo'} }).count()

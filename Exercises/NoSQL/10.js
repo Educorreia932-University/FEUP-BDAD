@@ -1,0 +1,1 @@
+db.tweets.findOne({'entities.user_mentions': {$ne:[]} })
