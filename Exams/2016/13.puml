@@ -1,0 +1,26 @@
+@startuml 13
+
+class Loja {
+    localização
+}
+
+class Produto {
+    nome
+    descrição
+    preço
+    categoria
+
+}
+
+class Fornecedor
+
+class Cliente
+
+Fornecedor "0..*" -- "1..*" Produto
+
+Loja -- "1..*" Produto
+Loja -- Cliente
+(Loja, Cliente) .. Compra
+Compra -- Produto
+
+@enduml
